@@ -60,6 +60,7 @@
     <a href="#s4">🛠 How to Use AI</a>
     <a href="#s5">🏛 組織轉變</a>
     <a href="#s6">👩‍💻 工程師 AI 實戰指南</a>
+    <a href="#s7">🏆 模型排行榜</a>
 </div></nav>
 <div class="hero">
   <h1>AI 週報 2026/05/18–05/24</h1>
@@ -1429,6 +1430,243 @@
 </ul><hr>
 
 <em>資料來源：[Cursor](https://cursor.sh) / [Windsurf](https://codeium.com/windsurf) / [MCP Protocol](https://modelcontextprotocol.io/) / [AI Fieldbook](https://aifieldbook.com/insights) / [AI Expo 2026](https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/) / [TechEx 2026](https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/) / [IBM](https://www.artificialintelligence-news.com/news/scaling-ai-value-beyond-pilot-phase-purgatory/) / [Databricks](https://www.databricks.com/blog/ai-developer-productivity-2026) / [Microsoft](https://github.com/microsoft/agent-governance-toolkit) / [@akshay_pachaar](https://x.com/akshay_pachaar/status/2058187317509275760)</em>
+</section><section id="s7">
+<h2>第七段：開源與閉源模型排行榜 — 2026 年 5 月最新</h2>
+
+<blockquote>數據更新：2026 年 5 月 21 日</blockquote>
+<blockquote>主要來源：Vellum (2026/04/23)、Artificial Analysis (2026/05)、各模型官方模型卡</blockquote>
+
+<p><hr></p>
+
+<h3>7.1 閉源模型排行榜：頂級 AI 的戰國時代</h3>
+
+<div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum LLM Leaderboard</a></div>
+<div class="source">📖 <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener">Artificial Analysis — Model Comparison</a></div>
+
+<table><tr><th>模型</th><th>GPQA Diamond</th><th>AIME 2025</th><th>SWE-Bench</th><th>HLE</th><th>ARC-AGI 2</th><th>MMMLU</th><th>輸入/輸出 ($/1M)</th><th>Context</th></tr>
+<tr><td><strong>GPT-5.5 (xhigh)</strong></td><td>93.6</td><td>-</td><td>58.6</td><td>41.4</td><td><strong>85.0</strong></td><td>-</td><td>$5 / $30</td><td>1M</td></tr>
+<tr><td><strong>GPT-5.5 Pro</strong></td><td>-</td><td>-</td><td>-</td><td><strong>43.1</strong></td><td>-</td><td>-</td><td>$30 / $180</td><td>1M</td></tr>
+<tr><td><strong>Claude Opus 4.7</strong></td><td><strong>94.2</strong></td><td>-</td><td><strong>87.6</strong></td><td>-</td><td>-</td><td>-</td><td>$5 / $25</td><td>1M</td></tr>
+<tr><td><strong>Claude Opus 4.6</strong></td><td>-</td><td>99.8</td><td>80.8</td><td>40.0</td><td>68.8</td><td>91.1</td><td>$5 / $25</td><td>200K</td></tr>
+<tr><td><strong>Gemini 3 Pro</strong></td><td>91.9</td><td><strong>100</strong></td><td>-</td><td><strong>45.8</strong></td><td>-</td><td><strong>91.8</strong></td><td>$2 / $12</td><td>10M</td></tr>
+<tr><td><strong>GPT 5.2</strong></td><td>92.4</td><td><strong>100</strong></td><td>80.0</td><td>-</td><td>52.9</td><td>-</td><td>$1.5 / $14</td><td>400K</td></tr>
+<tr><td><strong>Claude Sonnet 4.6</strong></td><td>-</td><td>-</td><td>-</td><td>-</td><td>58.3</td><td>89.3</td><td>$3 / $15</td><td>200K</td></tr>
+<tr><td><strong>Claude Opus 4.5</strong></td><td>-</td><td>-</td><td>80.9</td><td>-</td><td>37.6</td><td>90.8</td><td>$5 / $25</td><td>200K</td></tr>
+<tr><td><strong>GPT-4.1</strong></td><td>66.3</td><td>37.0</td><td>40.8</td><td>3.7</td><td>-</td><td>-</td><td>$2 / $8</td><td>1M</td></tr>
+<tr><td><strong>Mistral Large 2411</strong></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>$2 / $6</td><td>128K</td></tr></table>
+<h3>🏆 閉源各項冠軍</h3>
+
+<table><tr><th>能力維度</th><th>冠軍模型</th><th>分數</th><th>亞軍模型</th><th>分數</th></tr>
+<tr><td>🧠 推理（GPQA）</td><td>Claude Opus 4.7</td><td>94.2</td><td>GPT-5.5</td><td>93.6</td></tr>
+<tr><td>🔢 數學（AIME 2025）</td><td>Gemini 3 Pro / GPT 5.2</td><td>100</td><td>Claude Opus 4.6</td><td>99.8</td></tr>
+<tr><td>💻 編程（SWE-Bench）</td><td>Claude Opus 4.7</td><td>87.6</td><td>Claude Opus 4.6</td><td>80.8</td></tr>
+<tr><td>🧩 終極難題（HLE）</td><td>Gemini 3 Pro</td><td>45.8</td><td>GPT-5.5 Pro</td><td>43.1</td></tr>
+<tr><td>👁️ 視覺推理（ARC-AGI 2）</td><td>GPT-5.5</td><td>85.0</td><td>Claude Opus 4.6</td><td>68.8</td></tr>
+<tr><td>🌍 多語（MMMLU）</td><td>Gemini 3 Pro</td><td>91.8</td><td>Claude Opus 4.6</td><td>91.1</td></tr></table>
+<div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum — Top Models per Task</a></div>
+
+<h3>閉源關鍵觀察</h3>
+
+<ul><li><strong>Claude Opus 4.7 是編程之王</strong>：SWE-Bench 87.6%，斷層領先。如果團隊最重視 coding，Opus 4.7 目前無可匹敵</li>
+<li><strong>GPT-5.5 是視覺推理之王</strong>：ARC-AGI 2 達 85%，遠超第二名 16+ 百分點</li>
+<li><strong>Gemini 3 Pro 是最全能</strong>：HLE 45.8% + AIME 滿分 + MMMLU 91.8% + 10M context，綜合最強</li>
+<li><strong>GPT-5.5 Pro 的 $30/$180 定價</strong>：目前最貴的常規 API 模型，僅在 HLE 上比 GPT-5.5 高 1.7 分——CP 值存疑</li>
+<li><strong>Claude 編程能力碾壓</strong>：Opus 4.7 (87.6) > Opus 4.5 (80.9) ≈ Opus 4.6 (80.8) > GPT 5.2 (80.0)——Claude 佔據前四名</li>
+
+</ul><hr>
+
+<h3>7.2 開源模型排行榜：小模型正在霸凌大模型</h3>
+
+<div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum LLM Leaderboard</a></div>
+<div class="source">📖 <a href="https://huggingface.co/google/gemma-4-31b" target="_blank" rel="noopener">Gemma 4 模型卡 — HuggingFace</a></div>
+<div class="source">📖 <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1" target="_blank" rel="noopener">DeepSeek-R1 模型卡 — HuggingFace</a></div>
+<div class="source">📖 <a href="https://huggingface.co/moonshotai/Kimi-K2-Instruct" target="_blank" rel="noopener">Kimi K2 模型卡 — HuggingFace</a></div>
+<div class="source">📖 <a href="https://github.com/zai-org/glm-4" target="_blank" rel="noopener">GLM-4 GitHub</a></div>
+<div class="source">📖 <a href="https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E" target="_blank" rel="noopener">Llama 4 模型卡 — HuggingFace</a></div>
+<div class="source">📖 <a href="https://mistral.ai/news/mistral-small-3-1" target="_blank" rel="noopener">Mistral Small 3.1 官方部落格</a></div>
+
+<table><tr><th>模型</th><th>參數量</th><th>MMLU Pro</th><th>GPQA Diamond</th><th>AIME 2025</th><th>SWE-Bench</th><th>HLE</th><th>LiveCodeBench</th><th>輸入/輸出 ($/1M)</th><th>Context</th></tr>
+<tr><td><strong>Gemma 4 31B</strong></td><td>30.7B Dense</td><td><strong>85.2</strong></td><td><strong>84.3</strong></td><td>-</td><td>-</td><td>19.5</td><td><strong>80.0</strong></td><td>-</td><td>256K</td></tr>
+<tr><td><strong>Gemma 4 26B A4B</strong></td><td>25.2B MoE (3.8B active)</td><td>82.6</td><td>82.3</td><td>-</td><td>-</td><td>8.7</td><td>77.1</td><td>-</td><td>256K</td></tr>
+<tr><td><strong>DeepSeek-R1</strong></td><td>671B MoE (37B active)</td><td>84.0</td><td>71.5</td><td>-</td><td>49.2</td><td>-</td><td>65.9</td><td>$0.55 / $2.19</td><td>128K</td></tr>
+<tr><td><strong>Kimi K2 Instruct</strong></td><td>1T MoE (32B active)</td><td>81.1</td><td>75.1</td><td>49.5</td><td><strong>65.8</strong></td><td>4.7</td><td>53.7</td><td>-</td><td>128K</td></tr>
+<tr><td><strong>Kimi K2 Thinking</strong></td><td>1T MoE (32B active)</td><td>-</td><td>-</td><td><strong>99.1</strong></td><td>-</td><td><strong>44.9</strong></td><td>-</td><td>$0.6 / $2.5</td><td>256K</td></tr>
+<tr><td><strong>GLM-4-32B-0414</strong></td><td>32B Dense</td><td>-</td><td>-</td><td>-</td><td>33.8</td><td>-</td><td>-</td><td>-</td><td>32K→128K</td></tr>
+<tr><td><strong>DeepSeek-V3-0324</strong></td><td>685B MoE (37B active)</td><td>81.2</td><td>68.4</td><td>46.7</td><td>36.6</td><td>5.2</td><td>46.9</td><td>$0.27 / $1.1</td><td>128K</td></tr>
+<tr><td><strong>Llama 4 Maverick</strong></td><td>400B MoE (17B active)</td><td>80.5</td><td>69.8</td><td>-</td><td>-</td><td>-</td><td>43.4</td><td>$0.2 / $0.6</td><td>10M</td></tr>
+<tr><td><strong>Llama 4 Scout</strong></td><td>109B MoE (17B active)</td><td>74.3</td><td>57.2</td><td>-</td><td>-</td><td>-</td><td>32.8</td><td>$0.11 / $0.34</td><td>10M</td></tr>
+<tr><td><strong>GPT oss 20b</strong></td><td>20B</td><td>-</td><td>-</td><td><strong>98.7</strong></td><td>-</td><td>-</td><td>-</td><td>$0.08 / $0.35</td><td>131K</td></tr>
+<tr><td><strong>Qwen3-235B-A22B</strong></td><td>235B MoE (22B active)</td><td>77.3</td><td>62.9</td><td>24.7</td><td>34.4</td><td>5.7</td><td>37.0</td><td>-</td><td>128K</td></tr>
+<tr><td><strong>Mistral Small 3.1 24B</strong></td><td>24B Dense</td><td>66.8</td><td>46.0</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>128K</td></tr>
+<tr><td><strong>Gemma 4 E4B</strong></td><td>4.5B Dense</td><td>69.4</td><td>58.6</td><td>-</td><td>-</td><td>-</td><td>52.0</td><td>-</td><td>128K</td></tr></table>
+<h3>🏆 開源各項冠軍</h3>
+
+<table><tr><th>能力維度</th><th>冠軍模型</th><th>分數</th><th>備註</th></tr>
+<tr><td>🧠 推理（GPQA）</td><td>Gemma 4 31B</td><td>84.3</td><td>僅 30.7B 參數！小模型大能力</td></tr>
+<tr><td>🔢 數學（AIME 2025）</td><td>Kimi K2 Thinking</td><td>99.1</td><td>接近閉源頂級（Gemini 3 Pro 100%）</td></tr>
+<tr><td>💻 編程（SWE-Bench）</td><td>Kimi K2 Instruct</td><td>65.8</td><td>開源最強 coding，但仍落後閉源 21+ 分</td></tr>
+<tr><td>🧩 終極難題（HLE）</td><td>Kimi K2 Thinking</td><td>44.9</td><td>幾乎追平閉源 Gemini 3 Pro (45.8%) 🔥</td></tr>
+<tr><td>💻 即時編程（LiveCodeBench）</td><td>Gemma 4 31B</td><td>80.0</td><td>超越多數閉源模型</td></tr>
+<tr><td>🎯 CP 值最高</td><td>Gemma 4 26B A4B</td><td>-</td><td>僅啟動 3.8B，成績接近 31B Dense</td></tr>
+<tr><td>🌐 最大 Context</td><td>Llama 4 Scout/Maverick</td><td>-</td><td>10M tokens，開源之最</td></tr>
+<tr><td>💰 最便宜</td><td>GPT oss 20b</td><td>-</td><td>$0.08/$0.35，AIME 98.7%</td></tr></table>
+<h3>開源關鍵觀察</h3>
+
+<ul><li><strong>Gemma 4 31B 是開源綜合王</strong>：30.7B 的 Dense 模型，GPQA 84.3、MMLU Pro 85.2、LiveCodeBench 80.0，用最小的參數量打出了最大的成績</li>
+<li><strong>Kimi K2 Thinking 開了閉源的牆角</strong>：HLE 44.9%（僅落後 Gemini 3 Pro 0.9 分），AIME 2025 99.1%——開源模型首次在頂級難題上接近閉源</li>
+<li><strong>GPT oss 20b 是隱藏寶石</strong>：20B 參數，AIME 2025 98.7%，API 價格僅 $0.08/$0.35——如果這是真的，CP 值碾壓一切</li>
+<li><strong>GLM-4-32B 的 Agent 能力</strong>：IFEval 87.6、SimpleQA 88.1、TAU-Bench 超越 GPT-4o——32B 級距最強的 agentic 模型</li>
+<li><strong>Llama 4 的 10M Context</strong>：Scout 和 Maverick 都支援 10M tokens，是目前最大的開源 context window</li>
+
+</ul><div class="source">📖 <a href="https://huggingface.co/google/gemma-4-31b" target="_blank" rel="noopener">Gemma 4 模型卡</a></div> / [Kimi K2 模型卡](https://huggingface.co/moonshotai/Kimi-K2-Instruct) / [GLM-4 GitHub](https://github.com/zai-org/glm-4) / [Llama 4 模型卡](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E)
+
+<p><hr></p>
+
+<h3>7.3 開源 vs 閉源對決：差距還有多大？</h3>
+
+<div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum LLM Leaderboard — Cross-comparison</a></div>
+
+<table><tr><th>Benchmark</th><th>🥇 閉源最強</th><th>分數</th><th>🥇 開源最強</th><th>分數</th><th>差距</th></tr>
+<tr><td>GPQA Diamond</td><td>Claude Opus 4.7</td><td>94.2</td><td>Gemma 4 31B</td><td>84.3</td><td><strong>-9.9</strong></td></tr>
+<tr><td>AIME 2025</td><td>Gemini 3 Pro / GPT 5.2</td><td>100</td><td>Kimi K2 Thinking</td><td>99.1</td><td><strong>-0.9</strong> 🔥</td></tr>
+<tr><td>AIME 2024</td><td>DeepSeek-R1</td><td>79.8</td><td>—</td><td>—</td><td><strong>🏆 開源領先</strong></td></tr>
+<tr><td>SWE-Bench</td><td>Claude Opus 4.7</td><td>87.6</td><td>Kimi K2 Instruct</td><td>65.8</td><td><strong>-21.8</strong></td></tr>
+<tr><td>HLE</td><td>Gemini 3 Pro</td><td>45.8</td><td>Kimi K2 Thinking</td><td>44.9</td><td><strong>-0.9</strong> 🔥</td></tr>
+<tr><td>MATH-500</td><td>DeepSeek-R1</td><td>97.3</td><td>—</td><td>—</td><td><strong>🏆 開源領先</strong></td></tr>
+<tr><td>ARC-AGI 2</td><td>GPT-5.5</td><td>85.0</td><td>—</td><td>—</td><td>（開源無數據）</td></tr></table>
+<h3>差距分析</h3>
+
+<p>🔥 <strong>即將消失的差距</strong>：</p>
+<ul><li>AIME 2025：開源 99.1 vs 閉源 100——差距僅 0.9 分</li>
+<li>HLE：開源 44.9 vs 閉源 45.8——差距僅 0.9 分</li>
+<li>數學領域，開源（DeepSeek-R1 MATH-500 97.3%）已超越閉源</li>
+
+</ul>⚠️ <strong>仍然巨大的差距</strong>：
+<ul><li>SWE-Bench（編程）：開源 65.8 vs 閉源 87.6——差距 21.8 分，這是最大的能力鴻溝</li>
+<li>GPQA（推理）：開源 84.3 vs 閉源 94.2——差距 9.9 分</li>
+<li><strong>結論</strong>：在「考試型」benchmark 上，開源幾乎追平；在「實作型」benchmark（特別是 coding）上，閉源仍有巨大優勢</li>
+
+</ul><hr>
+
+<h3>7.4 性價比排行榜：每一分錢買到多少能力</h3>
+
+<div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum — Cheapest & Fastest Models</a></div>
+
+<h3>💰 最便宜模型 Top 10</h3>
+
+<table><tr><th>排名</th><th>模型</th><th>類型</th><th>輸入/輸出 ($/1M)</th><th>亮點</th></tr>
+<tr><td>1</td><td>Nova Micro</td><td>閉源</td><td>$0.04 / $0.14</td><td>最便宜的 API</td></tr>
+<tr><td>2</td><td>Gemma 3 27b</td><td>開源</td><td>$0.07 / $0.07</td><td>開源最便宜</td></tr>
+<tr><td>3</td><td>Gemini 1.5 Flash</td><td>閉源</td><td>$0.075 / $0.3</td><td>Google 低價模型</td></tr>
+<tr><td>4</td><td>GPT oss 20b</td><td>開源</td><td>$0.08 / $0.35</td><td>AIME 98.7%！超強 CP 值</td></tr>
+<tr><td>5</td><td>Gemini 2.0 Flash</td><td>閉源</td><td>$0.1 / $0.4</td><td>快又便宜</td></tr>
+<tr><td>6</td><td>Llama 4 Scout</td><td>開源</td><td>$0.11 / $0.34</td><td>10M context 超值</td></tr>
+<tr><td>7</td><td>Llama 4 Maverick</td><td>開源</td><td>$0.2 / $0.6</td><td>10M context + 更強能力</td></tr>
+<tr><td>8</td><td>DeepSeek V3</td><td>開源</td><td>$0.27 / $1.1</td><td>大模型超低價</td></tr>
+<tr><td>9</td><td>DeepSeek R1</td><td>開源</td><td>$0.55 / $2.19</td><td>MATH-500 97.3%</td></tr>
+<tr><td>10</td><td>Kimi K2 Thinking</td><td>開源</td><td>$0.6 / $2.5</td><td>HLE 44.9% 接近閉源</td></tr></table>
+<h3>⚡ 最快模型 Top 5</h3>
+
+<table><tr><th>排名</th><th>模型</th><th>速度</th><th>延遲 (TTFT)</th></tr>
+<tr><td>1</td><td>Llama 4 Scout</td><td>2600 t/s</td><td>0.33s</td></tr>
+<tr><td>2</td><td>Llama 3.3 70b</td><td>2500 t/s</td><td>-</td></tr>
+<tr><td>3</td><td>GPT oss 20b</td><td>564 t/s</td><td>4s</td></tr>
+<tr><td>4</td><td>GPT oss 120b</td><td>260 t/s</td><td>8.1s</td></tr>
+<tr><td>5</td><td>GPT-5.3 Codex</td><td>50 t/s</td><td><strong>0.003s</strong> 🚀</td></tr></table>
+<div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum — Fastest Models</a></div>
+
+<h3>🎯 各預算推薦</h3>
+
+<table><tr><th>你的預算</th><th>推薦模型</th><th>理由</th></tr>
+<tr><td><strong>最低成本</strong></td><td>GPT oss 20b ($0.08/$0.35)</td><td>AIME 98.7%，數學能力頂級</td></tr>
+<tr><td><strong>低成本 + 大 Context</strong></td><td>Llama 4 Scout ($0.11/$0.34)</td><td>10M context，速度極快</td></tr>
+<tr><td><strong>中等預算</strong></td><td>DeepSeek R1 ($0.55/$2.19)</td><td>綜合能力強，MATH-500 97.3%</td></tr>
+<tr><td><strong>中高預算</strong></td><td>Gemini 3 Pro ($2/$12)</td><td>全能王 + 10M context</td></tr>
+<tr><td><strong>高預算 — Coding</strong></td><td>Claude Opus 4.7 ($5/$25)</td><td>SWE-Bench 87.6%，編程無敵</td></tr>
+<tr><td><strong>高預算 — 推理</strong></td><td>GPT-5.5 ($5/$30)</td><td>GPQA 93.6 + ARC-AGI 85.0</td></tr>
+<tr><td><strong>不計成本</strong></td><td>GPT-5.5 Pro ($30/$180)</td><td>HLE 43.1%，但 CP 值存疑</td></tr></table>
+<p><hr></p>
+
+<h3>7.5 特殊能力排行榜：Agent、多語、視覺</h3>
+
+<h3>🤖 Agentic 能力排行（TAU-Bench / SWE-Bench / IFEval）</h3>
+
+<div class="source">📖 <a href="https://github.com/zai-org/glm-4" target="_blank" rel="noopener">GLM-4 GitHub — TAU-Bench Results</a></div>
+
+<table><tr><th>模型</th><th>TAU-Bench Retail</th><th>TAU-Bench Airline</th><th>IFEval</th><th>SimpleQA</th><th>類型</th></tr>
+<tr><td><strong>GLM-4-32B-0414</strong></td><td><strong>68.7</strong></td><td><strong>51.2</strong></td><td><strong>87.6</strong></td><td><strong>88.1</strong></td><td>開源 32B</td></tr>
+<tr><td>GPT-4o-1120</td><td>62.8</td><td>46.0</td><td>81.9</td><td>82.8</td><td>閉源</td></tr>
+<tr><td>DeepSeek-V3-0324</td><td>60.7</td><td>32.4</td><td>83.4</td><td>82.6</td><td>開源</td></tr>
+<tr><td>Qwen2.5-Max</td><td>58.3</td><td>22.0</td><td>85.6</td><td>79.0</td><td>開源</td></tr>
+<tr><td>DeepSeek-R1</td><td>33.0</td><td>37.3</td><td>84.3</td><td>83.9</td><td>開源</td></tr></table>
+<strong>觀察</strong>：GLM-4-32B 在 agentic 任務（TAU-Bench）上超越 GPT-4o，是目前 32B 級距最強的 agent 模型。這意味著不需要龐大參數量就能實現優秀的 agent 能力。
+
+<h3>👁️ 視覺推理排行（ARC-AGI 2）</h3>
+
+<table><tr><th>排名</th><th>模型</th><th>分數</th><th>類型</th></tr>
+<tr><td>1</td><td>GPT-5.5</td><td>85.0</td><td>閉源</td></tr>
+<tr><td>2</td><td>Claude Opus 4.6</td><td>68.8</td><td>閉源</td></tr>
+<tr><td>3</td><td>Claude Sonnet 4.6</td><td>58.3</td><td>閉源</td></tr>
+<tr><td>4</td><td>GPT 5.2</td><td>52.9</td><td>閉源</td></tr>
+<tr><td>5</td><td>Claude Opus 4.5</td><td>37.6</td><td>閉源</td></tr></table>
+<strong>觀察</strong>：視覺推理是開源模型目前最薄弱的領域——幾乎沒有開源模型在 ARC-AGI 2 上有具競爭力的表現。
+
+<h3>🌍 多語能力排行（MMMLU）</h3>
+
+<table><tr><th>排名</th><th>模型</th><th>分數</th><th>Context</th></tr>
+<tr><td>1</td><td>Gemini 3 Pro</td><td>91.8</td><td>10M</td></tr>
+<tr><td>2</td><td>Claude Opus 4.6</td><td>91.1</td><td>200K</td></tr>
+<tr><td>3</td><td>Claude Opus 4.5</td><td>90.8</td><td>200K</td></tr>
+<tr><td>4</td><td>Claude Sonnet 4.6</td><td>89.3</td><td>200K</td></tr></table>
+<div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum — Multilingual Reasoning</a></div>
+
+<p><hr></p>
+
+<h3>7.6 2026 年 5 月排行榜趨勢總結</h3>
+
+<h3>五大趨勢</h3>
+
+<ul><li><strong>閉源編程差距仍然巨大</strong>：SWE-Bench 上閉源領先 21.8 分，這是目前開源最大的能力鴻溝。Claude Opus 4.7 (87.6%) 遠超 Kimi K2 Instruct (65.8%)</li>
+
+<li><strong>數學和推理差距幾乎消失</strong>：AIME 2025 和 HLE 上，開源與閉源差距僅 0.9 分。DeepSeek-R1 在 MATH-500 上甚至超越閉源</li>
+
+<li><strong>小模型正在顛覆大模型</strong>：Gemma 4 31B 用 30.7B 參數打出了 GPQA 84.3——超越 671B 的 DeepSeek-R1 (71.5) 和 1T 的 Kimi K2 (75.1)</li>
+
+<li><strong>MoE 架構成為開源主流</strong>：DeepSeek-R1 (671B MoE)、Kimi K2 (1T MoE)、Llama 4 (400B MoE)——用更少的啟動參數實現更大的總能力</li>
+
+<li><strong>Context Window 軍備競賽</strong>：Gemini 3 Pro 和 Llama 4 都達到 10M tokens，GPT-5.5 達 1M。長 context 已從賣點變成基本要求</li>
+
+</ul><h3>選模型決策樹</h3>
+
+<p><pre><code>你需要什麼？
+├── 最好的編程能力 → Claude Opus 4.7
+├── 最好的推理能力 → GPT-5.5 / Claude Opus 4.7
+├── 最好的數學能力 → Gemini 3 Pro / GPT 5.2（閉源）或 Kimi K2 Thinking（開源）
+├── 最好的性價比 → GPT oss 20b / Llama 4 Scout
+├── 最大的 Context → Gemini 3 Pro / Llama 4 Scout (10M)
+├── 最好的 Agent 能力 → Claude Opus 4.7（閉源）或 GLM-4-32B（開源）
+├── 自行部署（免 API 費）→ Gemma 4 31B / DeepSeek-R1
+└── 不確定 → Gemini 3 Pro（全能 + 10M context + $2/$12）</code></pre></p>
+
+<p><hr></p>
+
+<h3>7.7 數據來源與缺口聲明</h3>
+
+<div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum</a></div> / [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models) / [Anthropic Blog](https://www.anthropic.com) / [Gemma 4 HF](https://huggingface.co/google/gemma-4-31b) / [DeepSeek-R1 HF](https://huggingface.co/deepseek-ai/DeepSeek-R1) / [Kimi K2 HF](https://huggingface.co/moonshotai/Kimi-K2-Instruct) / [GLM-4 GitHub](https://github.com/zai-org/glm-4) / [Llama 4 HF](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E) / [Mistral Blog](https://mistral.ai/news/mistral-small-3-1)
+
+<h3>⚠️ 已知缺口</h3>
+
+<table><tr><th>模型</th><th>缺失數據</th><th>原因</th></tr>
+<tr><td>Mistral Large 2411</td><td>幾乎所有 benchmark</td><td>官方僅公佈舊指標圖表</td></tr>
+<tr><td>GLM-Z1 系列</td><td>所有 benchmark</td><td>官方僅以圖片發佈</td></tr>
+<tr><td>Grok 4.20</td><td>所有數據</td><td>xAI 未公佈</td></tr>
+<tr><td>GPT-5 / 5.1 / 5.3 Codex</td><td>大部分 benchmark</td><td>OpenAI 未公開</td></tr>
+<tr><td>Gemini 3.1 Pro Preview</td><td>部分 benchmark</td><td>剛發布，數據尚不完整</td></tr></table>
+<blockquote>所有數據標注 <code>-</code> 表示該模型在該 benchmark 上無公開數據。<strong>不編造數字。</strong> 建議讀者直接查閱 [Vellum](https://www.vellum.ai/llm-leaderboard) 和 [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models) 獲取最新即時數據。</blockquote>
+
+<p><hr></p>
+
+<em>資料來源：[Vellum](https://www.vellum.ai/llm-leaderboard) / [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models) / [Anthropic](https://www.anthropic.com) / [HuggingFace 模型卡](https://huggingface.co/models) / [GLM-4 GitHub](https://github.com/zai-org/glm-4) / [Mistral Blog](https://mistral.ai/news/mistral-small-3-1)</em>
 </section>
 </div>
 </body></html>
