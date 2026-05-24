@@ -1437,24 +1437,48 @@
 <div class="source">📖 <a href="https://github.com/features/copilot" target="_blank" rel="noopener">GitHub Copilot</a></div>
 <div class="source">📖 <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener">MCP Protocol — Tool Integration Standard</a></div>
 
-<h3>工具分類矩陣</h3>
+<h3>工具分類矩陣（完整版）</h3>
 
 <table><tr><th>類別</th><th>代表工具</th><th>核心能力</th><th>適合場景</th></tr>
-<tr><td><strong>AI 原生 IDE</strong></td><td>Cursor, Windsurf</td><td>多檔案理解、Agent Mode、MCP 整合</td><td>日常開發主力環境</td></tr>
-<tr><td><strong>Copilot 外掛</strong></td><td>GitHub Copilot, Supermaven</td><td>行內補全、Chat 教學</td><td>維持現有 IDE 工作流</td></tr>
-<tr><td><strong>Agent 框架</strong></td><td>Claude Code, OpenAI Codex CLI</td><td>自主執行任務、跑終端、修 bug</td><td>複雜重構、跨檔案修改</td></tr>
-<tr><td><strong>低代碼 + AI</strong></td><td>Retool + AI, v0 by Vercel</td><td>用 AI 生成內部工具 UI</td><td>內部工具快速開發</td></tr>
-<tr><td><strong>終端 AI Agent</strong></td><td>Claude Code, OpenCode, Codex CLI</td><td>自主執行終端任務、模型可切換</td><td>重構、除錯、自動化工作流</td></tr></table>
+<tr><td><strong>🌐 消費級 AI 助手</strong></td><td>Claude.ai, ChatGPT, Gemini</td><td>概念解釋、架構討論、學習新技術</td><td>思考階段、學新框架、理解別人代碼</td></tr>
+<tr><td><strong>🔧 AI 原生 IDE</strong></td><td>Cursor, Windsurf</td><td>多檔案理解、Agent Mode、MCP 整合</td><td>日常開發主力環境</td></tr>
+<tr><td><strong>💻 Copilot 外掛</strong></td><td>GitHub Copilot, Supermaven, Cline</td><td>行內補全、Chat 教學</td><td>維持現有 IDE 工作流</td></tr>
+<tr><td><strong>🚀 終端 AI Agent</strong></td><td>Claude Code, OpenCode, Codex CLI, Aider</td><td>自主執行任務、跑終端、修 bug</td><td>複雜重構、跨檔案修改、自動化</td></tr>
+<tr><td><strong>🔓 開源自托管 Agent</strong></td><td>Hermes Agent, OpenClaw</td><td>自部署、跨 Session 記憶、任意 LLM</td><td>隱私優先、客製化、長期運行</td></tr>
+<tr><td><strong>🎨 低代碼 + AI</strong></td><td>Retool + AI, v0 by Vercel</td><td>用 AI 生成內部工具 UI</td><td>內部工具快速開發</td></tr></table>
+<h4>各工具簡介</h4>
+
+<table><tr><th>工具</th><th>官方連結</th><th>特點</th></tr>
+<tr><td><strong>Claude.ai</strong></td><td>anthropic.com/claude</td><td>網頁版對話，最強推理能力（Sonnet 4.6 / Opus 4.7），適合架構討論</td></tr>
+<tr><td><strong>ChatGPT</strong></td><td>chatgpt.com</td><td>OpenAI 官方介面，GPT-5.5，涵蓋 DALL-E、Code Interpreter、Memory</td></tr>
+<tr><td><strong>Gemini</strong></td><td>gemini.google.com</td><td>Google 生態整合，1M token 上下文，適合長文件分析</td></tr>
+<tr><td><strong>Cursor</strong></td><td>cursor.sh</td><td>AI 原生 IDE，Agent Mode + Composer + MCP，開發者最愛</td></tr>
+<tr><td><strong>Windsurf</strong></td><td>codeium.com/windsurf</td><td>Cascade 上下文流，MCP 整合，性價比高</td></tr>
+<tr><td><strong>GitHub Copilot</strong></td><td>github.com/features/copilot</td><td>深度整合 GitHub，行內補全，企業管理方便</td></tr>
+<tr><td><strong>Cline</strong></td><td>cline.bot</td><td>VS Code 外掛，支援多 Provider，開源免費</td></tr>
+<tr><td><strong>Claude Code</strong></td><td>anthropic.com/product/claude-code</td><td>Anthropic 官方終端 Agent，SWE-Bench 87.6%，終端-native</td></tr>
+<tr><td><strong>OpenCode</strong></td><td>opencode.ai</td><td>開源（160K+ stars），支援任意 LLM，Copilot/Ollama 免費登入</td></tr>
+<tr><td><strong>OpenAI Codex CLI</strong></td><td>github.com/openai/codex</td><td>沙盒隔離執行，Apache 2.0，企業安全流水線</td></tr>
+<tr><td><strong>Aider</strong></td><td>aider.chat</td><td>開源終端 AI，git 原生整合，支援 GPT-4o / Claude /本地模型</td></tr>
+<tr><td><strong>Hermes Agent</strong></td><td>hermes-agent.org</td><td>Nous Research 開源，跨 Session 記憶，40+ skills，可接 Telegram/Discord</td></tr>
+<tr><td><strong>OpenClaw</strong></td><td>openclaw.ai</td><td>多模型、多頻道（LINE/Telegram/Signal）、本地部署、MCP 整合</td></tr>
+<tr><td><strong>Retool + AI</strong></td><td>retool.com</td><td>用 AI 生成內部工具介面，低代碼 + AI</td></tr>
+<tr><td><strong>v0</strong></td><td>v0.dev</td><td>Vercel 出品，快速生成 React UI 原型</td></tr></table>
+<div class="source">📖 <a href="https://cursor.sh" target="_blank" rel="noopener">Cursor</a></div> / [Windsurf](https://codeium.com/windsurf) / [GitHub Copilot](https://github.com/features/copilot) / [MCP Protocol](https://modelcontextprotocol.io/) / [OpenCode](https://opencode.ai) / [Hermes Agent](https://hermes-agent.org) / [OpenClaw](https://openclaw.ai) / [Claude Code](https://www.anthropic.com/product/claude-code) / [Aider](https://aider.chat) / [Cline](https://cline.bot)
+
 <h3>選擇建議</h3>
 
 <table><tr><th>你是誰</th><th>推薦工具</th><th>理由</th></tr>
 <tr><td>全端工程師</td><td>Cursor（Agent Mode + MCP）</td><td>一個環境搞定前後端</td></tr>
-<tr><td>後端工程師</td><td>Cursor + Claude Code</td><td>終端導向，最強 coding 模型</td></tr>
+<tr><td>後端工程師</td><td>Claude Code + Cursor</td><td>終端導向，最強 coding 模型</td></tr>
 <tr><td>前端工程師</td><td>Cursor + v0</td><td>v0 做 UI 原型，Cursor 精修</td></tr>
 <tr><td>DevOps / SRE</td><td>Claude Code + 終端 AI</td><td>自動化腳本、日誌分析</td></tr>
 <tr><td>新手工程師</td><td>GitHub Copilot（補全）+ Cursor（Chat）</td><td>漸進式學習，不會被 Agent 搞混</td></tr>
-<tr><td>技術主管</td><td>ChatGPT/Claude（架構討論）+ Cursor（驗證想法）</td><td>戰略層面用大模型，戰術層面用 AI IDE</td></tr>
+<tr><td>技術主管</td><td>Claude.ai / ChatGPT（架構討論）+ Cursor（驗證想法）</td><td>戰略層面用大模型，戰術層面用 AI IDE</td></tr>
 <tr><td>開源愛好者</td><td>OpenCode + Ollama</td><td>完全開源、本地運行、零成本</td></tr>
+<tr><td>隱私優先者</td><td>Hermes Agent + Ollama</td><td>程式碼不出本機，跨 Session 記憶</td></tr>
+<tr><td>自建 Agent 平台</td><td>OpenClaw</td><td>多模型、多頻道、本地部署、MCP</td></tr>
+<tr><td>企業安全合規</td><td>OpenAI Codex CLI（沙盒）+ GitHub Copilot</td><td>沙盒隔離 + 企業管理控制台</td></tr>
 <tr><td>企業安全團隊</td><td>Codex CLI</td><td>沙盒隔離、Apache 2.0 開源</td></tr></table>
 <p><hr></p>
 
