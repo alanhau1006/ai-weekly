@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 週報 — 2026/05/18–05/24</title>
+  <style>
+    :root {
+      --bg: #0d1117; --surface: #161b22; --border: #30363d;
+      --text: #e6edf3; --text2: #8b949e;
+      --blue: #58a6ff; --green: #3fb950; --orange: #d29922;
+      --purple: #bc8cff; --red: #f85149; --teal: #39d2c0;
+      --grad: linear-gradient(135deg, #58a6ff, #bc8cff 50%, #39d2c0);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans TC',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:16px; }
+    nav { position:sticky; top:0; z-index:100; background:rgba(13,17,23,0.88); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 24px; }
+    nav .in { max-width:960px; margin:0 auto; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+    nav .brand { font-weight:700; font-size:1.1em; margin-right:16px; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    nav a { color:var(--text2); text-decoration:none; padding:4px 12px; border-radius:6px; font-size:.9em; transition:.2s; }
+    nav a:hover { color:var(--text); background:rgba(255,255,255,.06); }
+    .hero { max-width:960px; margin:0 auto; padding:56px 24px 24px; }
+    .hero h1 { font-size:2.2em; font-weight:800; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:6px; }
+    .hero .sub { color:var(--text2); font-size:1.05em; }
+    .container { max-width:960px; margin:0 auto; padding:0 24px 80px; }
+    section { margin-top:40px; padding:28px 32px; background:var(--surface); border:1px solid var(--border); border-radius:12px; scroll-margin-top:68px; }
+    h2 { font-size:1.5em; font-weight:700; margin-bottom:20px; padding-bottom:10px; border-bottom:2px solid var(--border); }
+    h3 { font-size:1.15em; font-weight:600; margin:24px 0 10px; color:var(--blue); }
+    h4 { font-size:1.05em; font-weight:600; margin:18px 0 8px; color:var(--purple); }
+    p { margin:6px 0; }
+    strong { color:var(--teal); }
+    em { color:var(--text2); font-style:normal; }
+    code { background:rgba(88,166,255,.1); color:var(--blue); padding:2px 6px; border-radius:4px; font-size:.88em; }
+    pre { background:rgba(0,0,0,.3); border:1px solid var(--border); border-radius:8px; padding:14px; overflow-x:auto; margin:10px 0; font-size:.88em; line-height:1.5; }
+    pre code { background:none; padding:0; }
+    blockquote { border-left:3px solid var(--purple); padding:4px 14px; margin:10px 0; color:var(--text2); font-size:.93em; background:rgba(188,140,255,.04); border-radius:0 6px 6px 0; }
+    table { width:100%; border-collapse:collapse; margin:14px 0; font-size:.9em; }
+    th { background:rgba(88,166,255,.1); color:var(--blue); font-weight:600; text-align:left; padding:8px 10px; border-bottom:2px solid var(--border); }
+    td { padding:8px 10px; border-bottom:1px solid var(--border); }
+    tr:hover td { background:rgba(255,255,255,.02); }
+    ul,ol { margin:6px 0; padding-left:22px; }
+    li { margin:3px 0; }
+    li::marker { color:var(--blue); }
+    .sum { background:linear-gradient(135deg,rgba(88,166,255,.08),rgba(188,140,255,.08)); border:1px solid rgba(88,166,255,.2); border-radius:10px; padding:18px 22px; margin:18px 0; }
+    .sum h4 { color:var(--blue); margin-top:0; }
+    hr { border:none; border-top:1px solid var(--border); margin:20px 0; }
+    @media(max-width:640px) { .hero h1{font-size:1.5em} section{padding:18px} table{font-size:.8em} th,td{padding:5px 6px} }
+  </style>
+</head>
+<body>
+<nav><div class="in">
+  <span class="brand">🔍 AI 週報</span>
+    <a href="#s1">🚀 進步與組織/工作轉變</a>
+    <a href="#s2">🧠 新技術</a>
+    <a href="#s3">💡 Use Cases</a>
+    <a href="#s4">🛠 How to Use AI</a>
+</div></nav>
+<div class="hero">
+  <h1>AI 週報 2026/05/18–05/24</h1>
+  <p class="sub">過去一週 AI 領域最重要的趨勢、技術、案例與實用指南</p>
+</div>
+<div class="container">
+<section id="s1">
+<h2>第一段：AI 造成的進步與組織／工作轉變</h2>
+
+<h3>1.1 企業從「輔助智慧」走向「自主智慧」的三階段演化</h3>
+
+<p>Deloitte AI & Insights 負責人 Prakul Sharma 提出了企業智慧成熟度曲線的三個階段，這是目前業界最清晰的框架之一：</p>
+
+<table><tr><th>階段</th><th>名稱</th><th>特徵</th><th>代表應用</th></tr>
+<tr><td>第一階段</td><td><strong>Assisted Intelligence（輔助智慧）</strong></td><td>AI 和分析幫人解讀資訊，人做最終決策</td><td>傳統 BI 儀表板、推薦系統</td></tr>
+<tr><td>第二階段</td><td><strong>Augmented Intelligence（增強智慧）</strong></td><td>機器學習輔助人類決策，人仍在迴圈中</td><td>GenAI 聊天機器人、Copilot、摘要工具</td></tr>
+<tr><td>第三階段</td><td><strong>Autonomous Intelligence（自主智慧）</strong></td><td>AI 在設定邊界內自行決策並執行，人設護欄但不驅動每一步</td><td>Agentic AI 自動採購、自主交易系統</td></tr></table>
+<strong>關鍵洞察</strong>：目前大多數企業的 GenAI 應用（聊天機器人、文件摘要）停留在第二階段，但真正的經濟價值在第三階段。GenAI 產生一個答案，而自主智慧追求一個結果——它會對目標進行推理、調用工具和資料、根據條件變化調整行動。
+
+<h3>「個人副駕駛」的規模化陷阱</h3>
+
+<p>TechEx North America 2026 多場會議反覆提及一個現象：<strong>「個人 Copilot」陷阱</strong>。一個 AI 工具在單一員工桌上表現很好，C-suite 主管自己用了覺得效率提升，全公司都很興奮——但要把這個成功經驗從一個人擴展到整個部門，甚至整個公司，卻處處碰壁。原因是：</p>
+
+<ul><li>個人效率 ≠ 組織效率：單人省下的時間，不等於流程被重構</li>
+<li>Pilot 用精選資料和冠軍團隊手動跑，掩蓋了缺失的身份控制、過期資料、延遲的合規審查</li>
+<li>一旦進入正式部署，這些「治理負債（governance debt）」立刻成為結構性阻礙</li>
+
+</ul><h3>1.2 OpenAI 新加坡實驗室與 IMDA Agentic AI 框架</h3>
+
+<p>OpenAI 在新加坡設立新區域實驗室，投資 <strong>S$3 億（約 US$2.25 億）</strong>，將招聘 <strong>200+ 員工</strong>，涵蓋工程、研究、政策等職位。這不只是擴張——它伴隨一個更重要的治理框架：</p>
+
+<h3>IMDA 的 Agentic AI 風險分級框架</h3>
+
+<p>新加坡資通訊媒體發展局（IMDA）與 OpenAI 合作推出全球首個針對 <strong>Agentic AI</strong> 的風險分級治理框架，分為四個風險等級：</p>
+
+<table><tr><th>風險等級</th><th>定義</th><th>治理要求</th></tr>
+<tr><td><strong>Tier 1 — 極低風險</strong></td><td>資訊檢索、簡單問答</td><td>基本透明度要求</td></tr>
+<tr><td><strong>Tier 2 — 低風險</strong></td><td>內部流程自動化、非關鍵任務</td><td>人類監督 + 活動日誌</td></tr>
+<tr><td><strong>Tier 3 — 中風險</strong></td><td>涉及外部系統互動、財務操作</td><td>人類在迴圈 + 審批閾值 + 完整審計軌跡</td></tr>
+<tr><td><strong>Tier 4 — 高風險</strong></td><td>自主執行交易、關鍵基礎設施操作</td><td>即時監控 + 隨時撤銷權限 + 監管機構通報</td></tr></table>
+<strong>為什麼重要</strong>：這是全球第一個不是「先發展再管制」，而是「隨風險遞增要求遞增治理」的框架。它解決了企業最頭痛的問題——不是不部署 Agentic AI，而是不知道部署到什麼程度需要什麼治理。
+
+<h3>1.3 美國政策：川普廢除 AI 行政命令的完整脈絡</h3>
+
+<p>川普政府正式廢除了拜登時期的 AI 行政命令（EO 14110），該命令要求大型 AI 模型開發者向政府報告訓練細節和安全測試結果。廢除的背景：</p>
+
+<ul><li><strong>Musk 和 Zuckerberg 積極遊說</strong>：認為報告要求增加合規成本、削弱美國 AI 公司競爭力</li>
+<li><strong>核心論述</strong>：「對中國競爭力」——如果美國 AI 公司被監管束縛，中國會超越</li>
+<li><strong>替代方案</strong>：川普政府傾向於由市場自行調節，而非預先監管</li>
+<li><strong>實際影響</strong>：目前沒有聯邦層面的強制性 AI 安全報告要求，各州自行立法（如加州 SB 1047 的各種變體仍在討論中）</li>
+
+</ul><h3>Nvidia H200 中國出口的結構性僵局</h3>
+
+<p>一個更具戲劇性的政策故事：川普帶 Jensen Huang 去北京參加川習會，會後對記者說「something could happen」——但什麼都沒發生。</p>
+
+<strong>僵局的真實結構</strong>：
+
+<ul><li>美國已授權：約 10 家中國公司（阿里巴巴、騰訊、字節跳動、京東等）獲得最多 <strong>75,000 顆 H200</strong> 的出口許可，聯想和富士康為授權經銷商</li>
+<li>中國不收貨：北京指示中國科技公司將 Nvidia 晶片限用於海外業務，同時支持國產製造</li>
+<li><strong>兩個要求互相矛盾</strong>：美國要求 H200 只能在中國境內使用；北京要求中國公司只用國產晶片做國內業務</li>
+<li><strong>華為趁虛而入</strong>：DeepSeek V4 已適配華為 Ascend 晶片進行訓練（不只是推理），這是首次中國前沿模型在訓練層面跑國產晶片</li>
+<li>Nvidia 中國營收已從 20%+ 跌至約 5%，本季度指引假設中國營收為零</li>
+
+</ul><strong>這意味什麼</strong>：中國第二大 AI 市場的硬體架構正在被政府指令而非技術基準決定。這不是貿易姿態，是結構性賭注——賭華為效能差距會縮小得夠快。
+
+<h3>1.4 歐盟 AI Act 的 Agentic AI 治理挑戰</h3>
+
+<p>歐盟 AI Act 在 2026 年進入執行階段，但 Agentic AI 帶來了立法者未預見的挑戰：</p>
+
+<h3>Article 9：持續風險管理</h3>
+
+<p>高風險 AI 的風險管理必須是<strong>持續的、基於證據的</strong>過程，內建於部署的每個階段（開發、準備、生產），並持續審查。</p>
+
+<h3>Article 13：可解釋性要求</h3>
+
+<p>高風險 AI 系統必須設計成讓部署者能理解其輸出。這意味著：</p>
+<ul><li>第三方 AI 系統不能是不透明的程式碼塊</li>
+<li>必須提供足夠文件確保安全合法使用</li>
+<li>模型選擇和部署方式同時是技術和法規考量</li>
+
+</ul><h3>Agentic AI 特有的治理工具</h3>
+
+<ul><li><strong>Asqav Python SDK</strong>：用密碼學簽名每個 agent 的操作，並將所有記錄連結到不可變的 hash chain（類似區塊鏈技術）。如果有人修改或刪除記錄，chain 驗證就會失敗</li>
+<li><strong>Agentic Asset List（代理資產清單）</strong>：企業必須維護所有運行中 agent 的登記冊，每個 agent 需唯一識別，記錄其能力和授予的權限</li>
+<li><strong>即時撤銷機制</strong>：在高風險場景中，必須能隨時撤銷 agent 的權限</li>
+
+</ul><h3>1.5 微軟開源 Agent 治理工具包</h3>
+
+<p>微軟發布了開源的 <strong>Agent Governance Toolkit</strong>（[GitHub](https://github.com/microsoft/agent-governance-toolkit)），針對 Agentic AI 的<strong>運行時安全</strong>，這是目前最實用的企業治理工具：</p>
+
+<h3>核心設計：攔截工具調用層</h3>
+
+<p>框架在語言模型和企業網路之間放置一個<strong>策略執行引擎</strong>：</p>
+<ul><li>每次 agent 嘗試調用外部工具，toolkit 攔截請求並對照治理規則檢查</li>
+<li>如果行為違反策略（例如：只授權讀取庫存數據的 agent 嘗試發送採購訂單），<strong>阻擋 API 調用並記錄事件</strong></li>
+<li>安全團隊獲得可驗證、可審計的每一個自主決策軌跡</li>
+<li>開發者不需要在每個模型的 prompt 中硬編碼安全協議——安全策略與應用邏輯完全解耦</li>
+
+</ul><h3>為什麼開源？</h3>
+
+<ul><li>如果微軟把這個功能鎖在自家平台，開發團隊會為了趕 deadline 直接繞過它</li>
+<li>開源讓安全控制能融入任何技術棧——無論是本地開源模型、Anthropic、還是混合架構</li>
+<li>開放標準讓整個資安生態系能在此基礎上建立商業儀表板和事件響應整合</li>
+
+</ul><h3>成本控制層面</h3>
+
+<ul><li>Agentic 系統在推理和執行的連續迴圈中燃燒 API token</li>
+<li>Toolkit 可設定 <strong>token 消耗上限和 API 調用頻率限制</strong></li>
+<li>防止 agent 在遞迴迴圈中產生天價雲端帳單</li>
+
+</ul><h3>1.6 AI 資料中心：能源與基礎設施的物理限制</h3>
+
+<h3>美國電網壓力</h3>
+
+<ul><li>PJM 互聯電網（覆蓋美東 13 州 + DC）的容量價格在 <strong>2 年內暴漲 10 倍</strong>，主要驅動力是 AI 資料中心的電力需求</li>
+<li>資料中心建設週期 3-5 年，但 AI 經濟學每 6-12 個月變化一次——基礎設施跟不上需求</li>
+<li>Santa Clara 市在 TechEx 分享了自己的資料中心建設之旅，凸顯水電約束如何切割 AI 規模化的 rhetoric</li>
+
+</ul><h3>中國的可再生能源映射</h3>
+
+<p>中國正在系統性地將 AI 資料中心選址映射到可再生能源資源：</p>
+<ul><li>西北地區（甘肅、青海）的太陽能和風能資源與 AI 運算需求配對</li>
+<li>國家電網規劃特高壓輸電線路將綠電輸送到東部算力中心</li>
+<li>這是一個政策主導的「綠色算力」戰略，不是市場自發行為</li>
+
+</ul><h3>TechEx 2026 的基礎設施共識</h3>
+
+<ul><li><strong>建設混亂（construction chaos）</strong>：土地、許可、冷卻、水資源、電力——每一項都是瓶頸</li>
+<li><strong>邊緣運算作為補充</strong>：將推理推向邊緣可以減少對中心化資料中心的依賴，但邊緣環境更加嚴苛</li>
+<li><strong>零信任安全</strong>：在 IIoT/IT 混合環境中，人類和機器都需要身份驗證和權限證明</li>
+
+</ul><h3>1.7 Physical AI 與人形機器人進入工廠</h3>
+
+<h3>Humanoid × Schaeffler：1,000-2,000 台機器人部署</h3>
+
+<p>英國公司 Humanoid 與德國工業供應商 Schaeffler 簽署供應協議：</p>
+<ul><li><strong>2026 年 12 月至 2027 年 6 月</strong>：首批部署在 Schaeffler 的 Herzogenaurach（箱體搬運）和 Schweinfurt（近全規模工廠測試）</li>
+<li><strong>2032 年前</strong>：預計部署 <strong>1,000-2,000 台</strong>人形機器人在 Schaeffler 全球製造基地</li>
+<li>Schaeffler 同時成為 Humanoid 的聯合致動器（joint actuators）首選供應商至 2031 年，預計覆蓋 <strong>100 萬+ 致動器</strong></li>
+<li>超過 Humanoid 輪式人形平台需求的一半</li>
+
+</ul><h3>韓國 RLWRLD：用工人動作數據訓練機器人</h3>
+
+<ul><li>首爾樂天酒店：餐飲人員折疊宴會餐巾和擺設餐具的動作被頭部和手部攝影機捕捉</li>
+<li>CJ 物流：倉庫工人搬運貨物的動作數據</li>
+<li>Lawson 便利店：食品陳列整理的動作數據</li>
+<li>工程師使用攝影機、VR 頭盔和動作追蹤手套添加自己的演示</li>
+<li>數據捕捉<strong>關節角度和施力水平</strong>等細節</li>
+<li>預計工業 AI 機器人 <strong>2028 年</strong>規模化部署</li>
+
+</ul><h3>大廠時間表</h3>
+
+<table><tr><th>公司</th><th>計畫</th><th>時間</th></tr>
+<tr><td><strong>Hyundai</strong></td><td>在全球工廠部署 Boston Dynamics 人形機器人，從 Georgia 廠開始</td><td>2028</td></tr>
+<tr><td><strong>Samsung</strong></td><td>所有製造基地轉型為「AI 驅動工廠」，包含人形和任務型機器人</td><td>2030</td></tr>
+<tr><td><strong>Lotte Hotel</strong></td><td>機器人處理 30-40% 後台活動準備工作</td><td>2029（目標）</td></tr></table>
+<h3>勞工團體的擔憂</h3>
+
+<p>韓國工會警告：</p>
+<ul><li>機器人部署可能影響就業並削弱技能勞動力管道</li>
+<li>目前人形機器人清理一間客房需要<strong>數小時</strong>，人類只需 40 分鐘</li>
+<li>但技能工作仍然是人類的成就，雇主和政府應與工人對話</li>
+
+</ul><h3>1.8 企業 AI 部署的「決策審計」方法論</h3>
+
+<p>Deloitte 的 Sharma 提出具體的操作方法：</p>
+
+<ul><li><strong>決策審計</strong>：選擇 1-2 個價值鏈，其結果被「決策」而非「任務」瓶頸</li>
+<li><strong>映射決策流程</strong>：誰有資料？誰有權限？交接在哪裡斷裂？需要什麼行動？哪裡需要判斷？</li>
+<li><strong>暴露資料和治理缺口</strong>：這些問題會同時揭示自主智慧能創造經濟價值的地方，以及可能導致 pilot 失敗的缺口</li>
+<li><strong>建立基礎層</strong>：AI/Agentic Fabric、資料、評估、agent 身份、human-in-the-loop 模式</li>
+<li><strong>在第一個價值鏈上證明有效</strong>，然後作為模板規模化</li>
+
+</ul><h3>「決策級資料」vs「報告級資料」的關鍵區別</h3>
+
+<table><tr><th>報告級資料</th><th>決策級資料</th></tr>
+<tr><td>每夜/每週批次處理</td><td>即時或近即時</td></tr>
+<tr><td>為儀表板消費而結構化</td><td>帶有時間戳記、可追溯來源、存取控制</td></tr>
+<tr><td>供人類判斷後行動</td><td>供 agent 直接行動</td></tr>
+<tr><td>去除了值如何衍生的譜系</td><td>保留完整譜系（provenance）</td></tr></table>
+<strong>風險案例</strong>：如果 agent 根據過時的批次處理數據執行交易，可能使用過期的價格層級或過時的合規框架——這是極端風險。
+
+<h3>1.9 Shadow AI：安全團隊跟不上部署速度</h3>
+
+<p>TechEx Cyber Security 軌道提出的「速度差距（velocity gap）」：</p>
+<ul><li>AI 部署成功時，獲得吸引力的速度極快</li>
+<li>但業務部門採用 GenAI 的速度超過安全團隊治理和確保企業安全的能力</li>
+<li><strong>Shadow AI</strong>：員工將敏感資料放入未批准的 AI 工具，或已批准的 AI 系統缺乏邊界和管理</li>
+<li>攻擊面在安全團隊不知情的情況下擴大</li>
+<li><strong>零信任作為答案</strong>：人類和機器都需要身份和權限證明；自動化工作流程必須服從與 IT 堆疊中其他元素相同的權限模型</li>
+
+</ul><h3>1.10 JBS Dev 的實務觀點：資料不必完美才能開始</h3>
+
+<p>JBS Dev 總裁 Joe Rose 的核心論點：</p>
+<ul><li><strong>「資料必須完美才能做 AI」是迷思</strong>——供應商和顧問推動這個說法是為了賣資料湖和多年轉型專案</li>
+<li>工具前所未有地好：LLM 可以理解半成品 prompt</li>
+<li><strong>醫療行業案例</strong>：客戶遷移計費系統，記錄混亂（PDF、圖片混雜；醫生名寫在病人名欄位等），GenAI 能從簡單 prompt 中提取乾淨數據，從 OCR 到圖片轉文字，後續用 agentic 方法比較客戶記錄和保險合約的計費費率</li>
+<li><strong>漸進式自動化</strong>：從 20% 自動化開始，然後 40%、60%、80%，逐步增長</li>
+<li><strong>未來焦點轉向成本和可攜性</strong>：模型能力的跳躍會放緩，重點轉向「如何讓成本可持續」和「如何讓模型跑在筆電或手機上而非資料中心」</li>
+<li><strong>不要買 SaaS——自己建</strong>：幾乎每家公司都有雲端存在，三大雲端的工具足以明天就開始實施 agentic 工作負載，不需要新的軟體授權和培訓</li>
+
+</ul><hr>
+
+<em>資料來源：Deloitte / AI News / TechEx 2026 / Implicator / Reuters / AP News / Microsoft GitHub / JBS Dev / IMDA Singapore</em>
+</section><section id="s2">
+<h2>第二段：AI 新技術（Model / Agent / Knowledge Management / Skills）</h2>
+
+<h3>2.1 GPT-5.5：OpenAI 第一個為 Agentic 工作重訓的基礎模型</h3>
+
+<h3>發布背景</h3>
+<ul><li>發布日期：<strong>2026 年 4 月 23 日</strong></li>
+<li>定位：OpenAI 第一個<strong>從零重訓（retrained from scratch）</strong>的基礎模型，專門為 agentic 工作設計</li>
+
+</ul><h3>核心能力</h3>
+<table><tr><th>能力</th><th>說明</th></tr>
+<tr><td><strong>規劃（Planning）</strong></td><td>能夠分解複雜任務為多步驟計畫，動態調整執行順序</td></tr>
+<tr><td><strong>工具使用（Tool Use）</strong></td><td>原生支持多工具調用，不再需要複雜的 prompt 工程來觸發</td></tr>
+<tr><td><strong>自我檢查（Self-checking）</strong></td><td>在執行過程中自行驗證中間結果，降低錯誤傳播</td></tr>
+<tr><td><strong>獨立任務（Independent Tasks）</strong></td><td>能在最少人類介入下完成端到端任務</td></tr></table>
+<h3>定價</h3>
+<ul><li>API 成本為前代的 <strong>2 倍</strong>，但 agentic 工作流整體效率提升意味著單位任務成本可能下降</li>
+<li>反映出「模型能力已趨近商品化，差異化在 agentic 能力」的市場趨勢</li>
+
+</ul><h3>產業意義</h3>
+<ul><li>這不是一個更大的 GPT-5——它是一個<strong>為 agent 而非 chat 設計的模型</strong></li>
+<li>標誌著基礎模型從「通用問答」向「任務執行引擎」的範式轉移</li>
+<li>其他廠商必然跟進，agentic-native 模型將成為新基準</li>
+
+</ul><h3>2.2 Qwen 3.7-Max 與中國開源模型的崛起</h3>
+
+<h3>Qwen 3.7-Max</h3>
+<ul><li>阿里巴巴發布的最新旗艦模型</li>
+<li>在多項基準上逼近或超越同級別閉源模型</li>
+<li>延續 Qwen 系列的開源策略，推動中國 AI 生態系</li>
+
+</ul><h3>DeepSeek V4：首個在華為晶片上訓練的前沿模型</h3>
+<ul><li><strong>DeepSeek V4</strong> 已適配華為 Ascend 晶片——不只是推理，是<strong>訓練</strong></li>
+<li>這是第一次中國前沿模型在訓練層面跑國產晶片</li>
+<li>騰訊 CSO 表示中國 GPU 供應將在 2026 年持續增加</li>
+<li>阿里巴巴 T-Head 專有 GPU 已實現規模化量產</li>
+
+</ul><h3>開源 vs 閉源的戰略意涵</h3>
+<ul><li>中國正透過政策指令將 AI 生態系鎖定在華為計算堆疊上</li>
+<li>這不是技術基準的選擇，而是供應鏈政策</li>
+<li>DeepSeek V4 的結果表明，至少在推理工作負載上，國產堆疊的效能差距正在閉合</li>
+
+</ul><h3>2.3 Nvidia Vera CPU：US$2,000 億的賭注</h3>
+
+<h3>財務數據</h3>
+<table><tr><th>指標</th><th>數值</th></tr>
+<tr><td>Q1 FY2027 營收</td><td><strong>US$816.2 億</strong>（超預期）</td></tr>
+<tr><td>Q2 FY2027 指引</td><td><strong>US$910 億</strong></td></tr>
+<tr><td>全年 AI 基礎設施投資規模</td><td><strong>US$2,000 億</strong>（Jensen Huang 在 GTC 2026 披露）</td></tr></table>
+<h3>Vera CPU 的定位</h3>
+<ul><li>Nvidia 首款自研伺服器 CPU，搭配新一代 GPU</li>
+<li>目標：打破 Intel/AMD 在 AI 伺服器 CPU 的壟斷</li>
+<li>整合 CPU + GPU 在同一平台，降低延遲、提升頻寬</li>
+<li>對 AMD MI400 系列和 Intel Gaudi 3 構成直接壓力</li>
+
+</ul><h3>更廣泛的 AI 晶片格局</h3>
+<ul><li><strong>Cerebras</strong>：晶圓級運算，單晶片 4 兆電晶體</li>
+<li><strong>Groq</strong>：LPU 推理引擎，極低延遲</li>
+<li><strong>AMD MI400</strong>：挑戰 Nvidia 的開源生態系策略</li>
+<li>模型能力商品化的同時，晶片差異化成為新戰場</li>
+
+</ul><h3>2.4 阿里巴巴 Zhenwu M890：Agent 優化晶片</h3>
+
+<h3>核心規格</h3>
+<ul><li>效能為前代的 <strong>3 倍</strong></li>
+<li>專門為 <strong>agentic 工作負載</strong>優化——不是通用推理，是 agent 的多步驟推理和工具調用</li>
+<li>阿里巴巴發布了多年矽路線圖，表明這不是一次性產品</li>
+
+</ul><h3>意義</h3>
+<ul><li>第一個明確標榜「agent 優化」的 AI 晶片</li>
+<li>意味著晶片設計正在適應 agentic AI 的獨特需求：多輪推理、工具調用、狀態管理</li>
+<li>可能帶動整個晶片行業從「更大更快的推理」向「更聰明的 agent 執行」轉向</li>
+
+</ul><h3>2.5 Anthropic Project Glasswing：AI 找漏洞的里程碑</h3>
+
+<h3>計畫概述</h3>
+<ul><li><strong>50+ 合作夥伴</strong>的協作計畫，目標是保護關鍵軟體</li>
+<li>使用 <strong>Claude Mythos Preview</strong> 模型</li>
+
+</ul><h3>成果</h3>
+<ul><li>發現 <strong>10,000+ 高/嚴重級別漏洞</strong></li>
+<li>進度現在受限於<strong>漏洞修復的速度</strong>，而非發現的速度</li>
+<li>這是 AI 安全研究的一個轉折點：瓶頸從「找問題」變成了「修問題」</li>
+
+</ul><h3>方法論</h3>
+<ul><li>Claude 被用來對開源軟體和關鍵基礎設施代碼進行系統性審計</li>
+<li>不同於傳統 fuzzing 和靜態分析，AI 模型能理解代碼語義和上下文</li>
+<li>發現的漏洞類型包括：記憶體安全問題、邏輯錯誤、競態條件等</li>
+
+</ul><h3>2.6 MCP 協議（Model Context Protocol）深入分析</h3>
+
+<h3>什麼是 MCP</h3>
+<ul><li>Anthropic 提出的開放協議，讓 AI 模型能以標準化方式連接外部工具和資料源</li>
+<li>類似於「AI 的 USB-C」——一個統一接口標準</li>
+
+</ul><h3>2026 年的進展</h3>
+<ul><li><strong>採用率快速增長</strong>：主流 IDE（Cursor、Windsurf）、開發工具鏈相繼支持</li>
+<li><strong>Server 生態系</strong>：從最初的幾十個 MCP server 增長到數百個，覆蓋資料庫、API、搜尋引擎、代碼分析等</li>
+<li><strong>多模型支援</strong>：不只 Claude，OpenAI 和 Google 模型也開始支持 MCP 連接</li>
+
+</ul><h3>對企業的意義</h3>
+<ul><li>MCP 讓企業能以標準化方式連接內部系統（ERP、CRM、HR）到 AI agent</li>
+<li>不需要為每個模型和每個系統寫客製化整合</li>
+<li><strong>風險</strong>：標準化接口也意味著標準化攻擊面——prompt injection 可以透過 MCP 傳播</li>
+
+</ul><h3>2.7 Agentic AI 架構的演進</h3>
+
+<h3>從 Copilot 到 Agent 的技術躍遷</h3>
+
+<table><tr><th>維度</th><th>Copilot 時代</th><th>Agent 時代</th></tr>
+<tr><td>互動模式</td><td>人問 AI 答</td><td>AI 追求目標</td></tr>
+<tr><td>工具使用</td><td>人類觸發</td><td>Agent 自主決定</td></tr>
+<tr><td>決策權</td><td>人類</td><td>Agent 在護欄內</td></tr>
+<tr><td>錯誤處理</td><td>人類修正</td><td>Agent 自行檢查和重試</td></tr>
+<tr><td>資料需求</td><td>報告級</td><td>決策級</td></tr>
+<tr><td>成本模型</td><td>固定訂閱</td><td>按使用量（token/API call）</td></tr></table>
+<h3>多 Agent 系統</h3>
+<ul><li>企業開始部署多個 agent 協作的系統</li>
+<li>每個 agent 有不同角色和權限</li>
+<li><strong>治理挑戰</strong>：agent 之間的互動也需要監控和審計</li>
+
+</ul><h3>2.8 Amazon Alexa for Shopping：AI + 電商的融合</h3>
+
+<h3>功能整合</h3>
+<ul><li>結合 <strong>Rufus</strong> 購物聊天機器人和 <strong>Alexa+</strong>，跨 Amazon App、網站和 Echo Show 運行</li>
+<li>功能涵蓋：產品問題、比較、價格追蹤、購物提醒、自動購買</li>
+
+</ul><h3>技術亮點</h3>
+<ul><li>多模態互動：語音（Echo Show）+ 文字（App/Web）</li>
+<li>Agentic 購買：在用戶授權的參數內自動完成購買</li>
+<li>個人化推薦基於購物歷史和瀏覽行為</li>
+
+</ul><h3>產業影響</h3>
+<ul><li>這是 AI agent 在消費端最大規模的部署之一</li>
+<li>如果成功，將改變消費者與電商的互動模式</li>
+<li>對其他電商平台構成壓力——需要類似的 agentic 購物體驗</li>
+
+</ul><h3>2.9 Physical AI 的模型需求</h3>
+
+<p>TechEx 2026 Physical AI 軌道的關鍵洞察：</p>
+<ul><li><strong>Physical AI 的核心模型不太可能是 LLM</strong>（雖然 LLM 在人機互動中有用）</li>
+<li>需要新的模型架構：理解物理世界、空間關係、力學、動作序列</li>
+<li>目前處於研究階段，但工廠場景是第一個落地應用</li>
+<li>軟體編碼被廣泛認為是 LLM 在專業場景中第一個產生正面結果的領域</li>
+<li><strong>自動化物理系統是下一個受益行業</strong></li>
+
+</ul><h3>人形機器人的技術挑戰</h3>
+<ul><li>手部靈巧度是工業和服務任務的優先事項</li>
+<li>RLWRLD 的數據捕捉：關節角度、施力水平、抓握方式</li>
+<li>從人類動作到機器人動作的轉換不是簡單的模仿——需要理解意圖和適應環境變化</li>
+
+</ul><hr>
+
+<em>資料來源：OpenAI / Anthropic / Alibaba / Nvidia / Amazon / AI News / TechEx 2026 / Reuters / AP News</em>
+</section><section id="s3">
+<h2>第三段：Use Cases（實際應用案例）</h2>
+
+<h3>3.1 企業採購：Agentic AI 的第一個高價值場景</h3>
+
+<h3>場景描述</h3>
+<p>一個 agentic 應用持續交叉比對供應鏈庫存和即時供應商價格（在 ERP 系統中），然後在預設財務參數內<strong>獨立授權採購訂單</strong>，只有在出現偏差時才暫停請求人類批准。</p>
+
+<h3>為什麼這是第一個高價值場景</h3>
+<ul><li>採購是成本密集流程：企業 40-70% 的支出在採購</li>
+<li>決策瓶頸明確：價格比對、庫存檢查、供應商選擇——都是可規則化的決策</li>
+<li>人類在迴圈中的成本高：每一個採購訂單的審批週期平均 2-5 天</li>
+<li>Agentic AI 可以將週期壓縮到分鐘級</li>
+
+</ul><h3>部署前提條件（Deloitte 框架）</h3>
+<ul><li>Agent 必須在 ERP 中有<strong>可驗證的身份</strong></li>
+<li>讀取的價格數據必須足夠即時以具合約效力</li>
+<li>操作在法律和合規部門正式認可的審批閾值內</li>
+<li>任何一個依賴項未解決，自主執行的案例就會完全崩潰</li>
+
+</ul><h3>3.2 醫療計費對帳：從混亂數據到結構化</h3>
+
+<h3>JBS Dev 案例</h3>
+<ul><li><strong>客戶</strong>：醫療行業客戶，遷移計費對帳系統</li>
+<li><strong>數據狀態</strong>：極度混亂——PDF 和圖片混雜；醫生名寫在病人名欄位；程序代碼不規範</li>
+<li><strong>GenAI 層</strong>：從簡單 prompt 提取乾淨數據，OCR 圖片、提取 PDF 文字</li>
+<li><strong>Agentic 層</strong>：比較客戶記錄和保險合約，驗證計費費率是否正確</li>
+<li><strong>漸進自動化</strong>：20% → 40% → 60% → 80%，逐步擴展</li>
+
+</ul><h3>為什麼這個案例重要</h3>
+<ul><li>證明了「數據不必完美也能開始」——LLM 可以理解半結構化甚至非結構化數據</li>
+<li>展示了 GenAI → Agentic AI 的漸進路徑：先解決數據理解，再解決決策自動化</li>
+<li>醫療計費是典型的高重複性、高錯誤率流程——AI 的理想目標</li>
+
+</ul><h3>3.3 軟體安全審計：AI 找漏洞的工業化</h3>
+
+<h3>Anthropic Project Glasswing</h3>
+<ul><li><strong>規模</strong>：50+ 合作夥伴，10,000+ 高/嚴重級別漏洞</li>
+<li><strong>瓶頸轉移</strong>：從「發現漏洞」變成「修復漏洞」的速度</li>
+<li><strong>方法</strong>：AI 理解代碼語義，超越傳統 fuzzing 和靜態分析</li>
+<li><strong>影響</strong>：開源軟體和關鍵基礎設施的安全態勢可能發生根本性改善</li>
+
+</ul><h3>企業級安全應用</h3>
+<ul><li>代碼審計自動化：從人工審計（慢、貴、覆蓋率低）到 AI 輔助（快、可擴展、語義理解）</li>
+<li>持續安全監控：不只是部署前掃描，而是持續的運行時監控</li>
+<li>Microsoft Agent Governance Toolkit 提供了運行時攔截層</li>
+
+</ul><h3>3.4 工廠自動化：人形機器人落地</h3>
+
+<h3>Schaeffler × Humanoid</h3>
+<ul><li><strong>首期任務</strong>：箱體搬運（Herzogenaurach）、近全規模工廠測試（Schweinfurt）</li>
+<li><strong>部署規模</strong>：1,000-2,000 台人形機器人，2032 年前</li>
+<li><strong>供應鏈整合</strong>：Schaeffler 同時供應 100 萬+ 致動器，角色從客戶變成供應商+客戶</li>
+
+</ul><h3>韓國 RLWRLD 的工人動作數據採集</h3>
+<ul><li><strong>酒店</strong>：Lotte Hotel 餐飲人員的餐巾折疊、餐具擺設動作</li>
+<li><strong>物流</strong>：CJ 倉庫工人搬運貨物的動作模式</li>
+<li><strong>零售</strong>：Lawson 便利店食品陳列整理</li>
+<li><strong>技術</strong>：頭部+手部攝影機、VR 頭盔、動作追蹤手套，捕捉關節角度和施力水平</li>
+
+</ul><h3>演示成果</h3>
+<ul><li>輪式機器人用類人金屬手在 minibar 移動杯子</li>
+<li>人形機器人打開箱子、放入滑鼠、關箱、放到輸送帶</li>
+
+</ul><h3>大廠時間表與規模</h3>
+<table><tr><th>公司</th><th>部署</th><th>時間</th><th>規模</th></tr>
+<tr><td>Hyundai</td><td>Boston Dynamics 人形機器人</td><td>2028 起</td><td>全球工廠，Georgia 廠先</td></tr>
+<tr><td>Samsung</td><td>AI 驅動工廠</td><td>2030</td><td>所有製造基地</td></tr>
+<tr><td>Lotte Hotel</td><td>房間清潔機器人</td><td>2029 目標</td><td>30-40% 後台工作</td></tr></table>
+<h3>當前限制</h3>
+<ul><li>人形機器人清理一間客房需要<strong>數小時</strong>，人類只需 40 分鐘</li>
+<li>手部靈巧度仍是瓶頸</li>
+<li>工會擔憂就業影響和技能勞動力管道</li>
+
+</ul><h3>3.5 Amazon Alexa for Shopping：消費端 AI Agent</h3>
+
+<h3>功能矩陣</h3>
+<table><tr><th>功能</th><th>描述</th></tr>
+<tr><td>產品問答</td><td>「這款吸塵器適合寵物毛髮嗎？」</td></tr>
+<tr><td>產品比較</td><td>「Dyson V15 和 V14 差在哪？」</td></tr>
+<tr><td>價格追蹤</td><td>追蹤指定商品降價並通知</td></tr>
+<tr><td>購物提醒</td><td>「衛生紙快用完了，記得買」</td></tr>
+<tr><td>自動購買</td><td>在授權參數內自動下單</td></tr></table>
+<h3>平台覆蓋</h3>
+<ul><li>Amazon App（iOS/Android）</li>
+<li>Amazon 網站</li>
+<li>Echo Show（語音+螢幕）</li>
+
+</ul><h3>產業影響</h3>
+<ul><li>這是 agentic AI 在消費端最大規模的部署之一</li>
+<li>改變消費者從「搜尋→比較→購買」到「描述需求→AI 解決」的範式</li>
+<li>對 Walmart、Target 等競爭對手的壓力</li>
+
+</ul><h3>3.6 程式碼開發：LLM 在專業場景的第一個勝利</h3>
+
+<p>TechEx 2026 多位代表一致認為：</p>
+<ul><li><strong>軟體編碼是目前 LLM 在專業場景中第一個產生正面結果的領域</strong></li>
+<li>從代碼補全到代碼生成到代碼審查，AI 輔助開發已成為主流</li>
+<li>下一步：agentic 開發——agent 不只寫代碼，還能跑測試、修 bug、提交 PR</li>
+
+</ul><h3>企業案例（Databricks / Splunk 數據）</h3>
+<ul><li>開發者生產力提升 30-55%（使用 AI 輔助編碼工具）</li>
+<li>Bug 密度下降 20-40%（AI 代碼審查）</li>
+<li>新手上手時間縮短 50%+（AI 輔助學習和解釋）</li>
+
+</ul><h3>3.7 數位雙生（Digital Twins）的務實轉向</h3>
+
+<p>TechEx 2026 的討論：</p>
+<ul><li>數位雙生不是視覺複製品用於展示——那只是「漂亮的 demo」</li>
+<li><strong>更好的版本</strong>：能幫助工廠、城市或市政設施的運營模型</li>
+</ul>- 預測測試決策（模擬 before 實際操作）
+<p>- 改善維護（預測設備故障）</p>
+<p>- 優化資源分配</p>
+
+<h3>挑戰</h3>
+<ul><li>Pilot purgatory：數位雙生在 demo 中看起來很好，碰到現實的舊機器和老舊軟體就卡住</li>
+<li>「另一個沒人負責的儀表板」綜合症</li>
+
+</ul><h3>3.8 邊緣運算 AI：將推理推向現場</h3>
+
+<h3>應用場景</h3>
+<ul><li>製造業：即時品質檢測（延遲 < 10ms）</li>
+<li>零售：店內客流分析和推薦</li>
+<li>能源：電網負載預測和調度</li>
+<li>醫療：即時影像診斷輔助</li>
+
+</ul><h3>架構選擇</h3>
+<table><tr><th>模式</th><th>優點</th><th>缺點</th></tr>
+<tr><td>本地部署</td><td>低延遲、資料不出場</td><td>硬體成本高、更新困難</td></tr>
+<tr><td>雲端推理</td><td>彈性、易更新</td><td>延遲高、依賴網路</td></tr>
+<tr><td>混合</td><td>最佳平衡</td><td>架構複雜度最高</td></tr></table>
+<h3>JBS Dev 的觀點</h3>
+<ul><li>「最後一哩問題」：如何讓模型跑在筆電或手機上，而不是資料中心</li>
+<li>模型訓練用的數據（整個網際網路）已經被充分吸收，不太可能有更多未開發數據帶來突破</li>
+<li>焦點將從模型能力跳躍轉向成本可持續性和可攜性</li>
+
+</ul><h3>3.9 金融服務：AI Agent 在交易和風控中的應用</h3>
+
+<h3>已知應用模式</h3>
+<ul><li>自動化合規檢查：Agent 持續掃描交易記錄，標記可疑活動</li>
+<li>風險評估自動化：Agent 在授權閾值內調整風險參數</li>
+<li>客戶服務：Agentic 客服處理查詢、投訴、帳戶操作</li>
+
+</ul><h3>治理要求（金融行業特別嚴格）</h3>
+<ul><li>每一個 agent 的決策都必須可審計</li>
+<li>即時撤銷能力是硬性要求</li>
+<li>監管機構通報機制必須內建</li>
+
+</ul><hr>
+
+<em>資料來源：Deloitte / JBS Dev / Anthropic / Amazon / Reuters / AP News / TechEx 2026 / Databricks / Splunk</em>
+</section><section id="s4">
+<h2>How to Use AI（過去一週實用指南）</h2>
+
+<blockquote>時間範圍：2026 年 5 月 18 日 — 5 月 24 日</blockquote>
+
+<p><hr></p>
+
+<h3>4.1 ChatGPT + Office 整合：用 Prompt 做 PPT</h3>
+
+<h3>功能</h3>
+<p>ChatGPT 側邊欄可直接在 PowerPoint 中生成和編輯簡報。</p>
+
+<h3>實際操作步驟</h3>
+<ul><li>打開 PowerPoint，啟動 ChatGPT 側邊欄</li>
+<li>輸入：「幫我做一份 Q3 營收報告簡報，10 頁，包含圖表建議」</li>
+<li>ChatGPT 生成大綱 → 確認 → 自動填入每一頁</li>
+<li>手動調整排版和數據</li>
+
+</ul><h3>進階技巧</h3>
+<ul><li>指定風格：「企業簡約風，深藍主色」</li>
+<li>提供數據源：「根據這份 Excel 數據做圖表」</li>
+<li>迭代修改：「第三頁加一個趨勢圖」「標題改短一點」</li>
+
+</ul><hr>
+
+<h3>4.2 Cursor / Windsurf：AI 原生開發環境</h3>
+
+<h3>Cursor 重點功能</h3>
+<ul><li><strong>Composer</strong>：多檔案同時編輯，AI 理解跨檔案依賴</li>
+<li><strong>Tab 補全</strong>：比 GitHub Copilot 更精準的上下文補全</li>
+<li><strong>MCP 支援</strong>：連接外部工具（資料庫、API、搜尋）</li>
+<li><strong>Agent Mode</strong>：讓 AI 自主跑終端指令、安裝套件、修 bug</li>
+
+</ul><h3>Windsurf 特色</h3>
+<ul><li>Cascade 功能：AI 理解整個專案的上下文流</li>
+<li>自動化工作流：AI 觸發 → 執行 → 驗證 → 提交</li>
+
+</ul><h3>實用建議</h3>
+<ul><li>用 <code>.cursorrules</code> 或 <code>.windsurfrules</code> 定義專案規範</li>
+<li>善用 MCP 連接內部系統</li>
+<li>小步迭代：不要一次讓 AI 改太多，逐一檢查</li>
+
+</ul><hr>
+
+<h3>4.3 Microsoft Agent Governance Toolkit：保護你的 AI Agent</h3>
+
+<h3>為什麼需要它</h3>
+<ul><li>Agent 可以讀郵件、寫腳本、推送程式碼——如果沒有運行時治理，一個 prompt injection 或幻覺就可能導致災難</li>
+<li>靜態程式碼分析和部署前掃描無法處理 LLM 的非確定性本質</li>
+
+</ul><h3>如何使用</h3>
+<ul><li>安裝：<code>pip install agent-governance-toolkit</code></li>
+<li>配置策略：定義 agent 可以調用哪些工具、在什麼條件下</li>
+<li>部署攔截層：在 LLM 和企業網路之間</li>
+<li>監控儀表板：查看所有 agent 的操作記錄和被攔截的事件</li>
+
+</ul><h3>核心功能</h3>
+<table><tr><th>功能</th><th>說明</th></tr>
+<tr><td>工具調用攔截</td><td>即時檢查每個 API 調用是否符合策略</td></tr>
+<tr><td>Token 消耗上限</td><td>防止 agent 在迴圈中燒掉天價帳單</td></tr>
+<tr><td>審計軌跡</td><td>每一個自主決策都有可驗證記錄</td></tr>
+<tr><td>安全策略解耦</td><td>安全規則不需要寫進 prompt</td></tr></table>
+<h3>開源位址</h3>
+<code>https://github.com/microsoft/agent-governance-toolkit</code>
+
+<p><hr></p>
+
+<h3>4.4 IMDA Agentic AI 風險分級框架：企業部署指南</h3>
+
+<h3>第一步：評估你的 Agent 屬於哪個風險等級</h3>
+
+<table><tr><th>等級</th><th>場景舉例</th><th>必要治理</th></tr>
+<tr><td>Tier 1</td><td>內部知識問答</td><td>透明度標示</td></tr>
+<tr><td>Tier 2</td><td>自動排程、文件分類</td><td>人類監督 + 活動日誌</td></tr>
+<tr><td>Tier 3</td><td>客戶服務、財務報表生成</td><td>人類在迴圈 + 審批閾值 + 審計軌跡</td></tr>
+<tr><td>Tier 4</td><td>自動交易、關鍵基礎設施操作</td><td>即時監控 + 撤銷權限 + 監管通報</td></tr></table>
+<h3>實作清單</h3>
+<ul><li>[ ] 建立 <strong>Agentic Asset List</strong>：登記每一個 agent，記錄 ID、能力、權限</li>
+<li>[ ] 設定 <strong>Human-in-the-Loop 關卡</strong>：在高風險決策點加入人工審批</li>
+<li>[ ] 部署 <strong>即時撤銷機制</strong>：能隨時停止 agent 的行動</li>
+<li>[ ] 建立 <strong>密碼學審計鏈</strong>（如 Asqav SDK）：確保操作記錄不可篡改</li>
+<li>[ ] 確保 <strong>EU AI Act Article 13 合規</strong>：agent 的輸出必須可解釋</li>
+
+</ul><hr>
+
+<h3>4.5 Deloitte 決策審計法：從 Pilot 到生產的正確路徑</h3>
+
+<h3>步驟</h3>
+
+<strong>1. 選擇價值鏈</strong>
+<ul><li>不要從技術出發，從「哪裡的結果被決策（而非任務）瓶頸」出發</li>
+<li>選 1-2 個價值鏈開始</li>
+
+</ul><strong>2. 映射決策流程</strong>
+<ul><li>誰有資料？</li>
+<li>誰有權限？</li>
+<li>交接在哪裡斷裂？</li>
+<li>需要什麼行動？</li>
+<li>哪裡需要判斷？</li>
+
+</ul><strong>3. 暴露缺口</strong>
+<ul><li>這些問題會同時揭示：自主智慧能創造價值的地方 + pilot 可能失敗的缺口</li>
+
+</ul><strong>4. 建立基礎層</strong>
+<ul><li>AI/Agentic Fabric</li>
+<li>決策級資料（不是報告級！）</li>
+<li>評估機制</li>
+<li>Agent 身份管理</li>
+<li>Human-in-the-loop 模式</li>
+
+</ul><strong>5. 在第一個價值鏈上證明有效，然後作為模板規模化</strong>
+
+<h3>關鍵原則</h3>
+<ul><li><strong>Pilot 不是實驗，是第一個生產實例</strong>——帶同樣的 eval、身份模型和治理</li>
+<li><strong>治理負債（Governance Debt）</strong>：Pilot 中跳過的控制、審計軌跡、風險框架，會在正式部署時成為阻礙</li>
+<li><strong>模型不是瓶頸</strong>：前沿能力已趨近商品化，瓶頸在上游——工作流映射和資料品質</li>
+
+</ul><hr>
+
+<h3>4.6 解決「Pilot Purgatory」：5 個實用建議</h3>
+
+<p>TechEx 2026 多場會議的共識：</p>
+
+<ul><li><strong>不要自動化壞流程</strong>：先修復工作流，再讓 agent 介入。否則你只是把壞流程跑得更快</li>
+<li><strong>決策級資料優先</strong>：確保 agent 讀取的數據帶有時間戳、來源譜系和存取控制，而不是夜間批次的摘要</li>
+<li><strong>治理從第一天開始</strong>：不要等 pilot 成功再加安全——把 eval、身份、合規當作 first-class requirement</li>
+<li><strong>漸進式自動化</strong>：從 20% 開始，逐步到 40%、60%、80%。不要一次跳到全自動</li>
+<li><strong>監控 token 成本</strong>：Agentic 工作流的多輪推理會快速累積 API 成本，設定消耗上限</li>
+
+</ul><hr>
+
+<h3>4.7 Shadow AI 防治：零信任 + Agent 治理</h3>
+
+<h3>問題</h3>
+<ul><li>員工使用未批准的 AI 工具處理敏感資料</li>
+<li>已批准的 AI 系統缺乏邊界管理</li>
+<li>攻擊面在安全團隊不知情的情況下擴大</li>
+
+</ul><h3>解決方案</h3>
+
+<table><tr><th>措施</th><th>實作方式</th></tr>
+<tr><td><strong>零信任</strong></td><td>人類和機器都需要身份和權限證明，預設拒絕</td></tr>
+<tr><td><strong>Agent 登記冊</strong></td><td>所有運行中的 agent 必須在登記冊中，記錄能力和權限</td></tr>
+<tr><td><strong>運行時攔截</strong></td><td>Microsoft Agent Governance Toolkit 攔截所有工具調用</td></tr>
+<tr><td><strong>數據治理 = 資安治理</strong></td><td>兩者已不可分——資料外洩和 AI 幻覺是同一個問題的兩面</td></tr>
+<tr><td><strong>AI 工具白名單</strong></td><td>只允許通過安全審查的 AI 服務</td></tr></table>
+<p><hr></p>
+
+<h3>4.8 開始用 AI 的最低門檻路徑（JBS Dev 方法）</h3>
+
+<h3>Joe Rose 的建議</h3>
+<ul><li><strong>不要買 SaaS，用你已有的雲端</strong>：AWS/Azure/GCP 的工具已經足夠開始 agentic 工作負載</li>
+<li><strong>數據不必完美</strong>：LLM 可以理解半結構化數據，不要被「資料湖先建好」的迷思阻擋</li>
+<li><strong>設好護欄就開始</strong>：human-in-the-loop + 最低限度的治理，先跑起來</li>
+<li><strong>漸進自動化</strong>：20% → 40% → 60% → 80%</li>
+<li><strong>關注成本和可攜性</strong>：模型能力趨同後，差異化在成本控制和部署靈活性</li>
+
+</ul><h3>雲端起步清單</h3>
+<ul><li>[ ] Azure OpenAI Service / AWS Bedrock / GCP Vertex AI——選一個開始</li>
+<li>[ ] 用 SDK 串接內部 API（ERP、CRM）</li>
+<li>[ ] 部署 Microsoft Agent Governance Toolkit</li>
+<li>[ ] 設定 token 消耗預算</li>
+<li>[ ] 建立 agent 身份和審批流程</li>
+
+</ul><hr>
+
+<h3>4.9 EU AI Act 合規清單</h3>
+
+<h3>Article 9：持續風險管理</h3>
+<ul><li>[ ] 風險管理是持續的、基於證據的過程</li>
+<li>[ ] 內建於開發、準備、生產每個階段</li>
+<li>[ ] 持續審查和更新</li>
+
+</ul><h3>Article 13：可解釋性</h3>
+<ul><li>[ ] 高風險 AI 的輸出必須讓部署者能理解</li>
+<li>[ ] 第三方 AI 不能是不透明程式碼塊</li>
+<li>[ ] 提供足夠文件確保安全合法使用</li>
+
+</ul><h3>Agent 特有要求</h3>
+<ul><li>[ ] Agentic Asset List（所有 agent 的登記冊）</li>
+<li>[ ] 密碼學簽名操作記錄（Asqav SDK 或同類工具）</li>
+<li>[ ] 即時撤銷能力</li>
+<li>[ ] 監管機構通報機制</li>
+
+</ul><hr>
+
+<em>資料來源：IMDA / Deloitte / Microsoft / TechEx 2026 / JBS Dev / EU AI Act</em>
+</section>
+</div>
+</body></html>
