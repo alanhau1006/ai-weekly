@@ -1432,53 +1432,146 @@
 
 <h3 id="s6-61">6.1 AI 輔助開發的工具全景：2026 年工程師的必備武器庫</h3>
 
-<div class="source">📖 <a href="https://cursor.sh" target="_blank" rel="noopener">Cursor — AI Code Editor</a></div>
-<div class="source">📖 <a href="https://codeium.com/windsurf" target="_blank" rel="noopener">Windsurf — AI IDE</a></div>
-<div class="source">📖 <a href="https://github.com/features/copilot" target="_blank" rel="noopener">GitHub Copilot</a></div>
-<div class="source">📖 <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener">MCP Protocol — Tool Integration Standard</a></div>
+<div class="source">📖 <a href="https://timewell.jp/en/columns/ai-coding-tools-complete-benchmark-2026" target="_blank" rel="noopener">TIMEWELL — AI Coding Tools Benchmark 2026</a></div>
+<div class="source">📖 <a href="https://www.faros.ai/blog/best-ai-coding-agents-2026" target="_blank" rel="noopener">Faros.ai — AI Coding Agents 2026</a></div>
+<div class="source">📖 <a href="https://toolpod.dev/ai-coding-tools-comparison" target="_blank" rel="noopener">Toolpod — 18 Tools Compared</a></div>
+<div class="source">📖 <a href="https://docs.kanaries.net/articles/best-ai-coding-tools-2026" target="_blank" rel="noopener">Kanaries — 15 Best AI Coding Tools 2026</a></div>
 
-<h3>工具分類矩陣（完整版）</h3>
+<p>2026 年，AI 編程工具已進入<strong>第三代 Agent 時代</strong>。從第一代的程式碼補全（Ghost Text），到第二代的對話式重構，再到第三代的自主 Agent（自己讀取檔案、跑測試、修 Bug）。第三代的代表是 Claude Code、Cursor Composer、Devin、Codex CLI——它們把「認知的主體」從人類轉向了 AI。</p>
 
-<table><tr><th>類別</th><th>代表工具</th><th>核心能力</th><th>適合場景</th></tr>
-<tr><td><strong>🌐 消費級 AI 助手</strong></td><td>Claude.ai, ChatGPT, Gemini</td><td>概念解釋、架構討論、學習新技術</td><td>思考階段、學新框架、理解別人代碼</td></tr>
-<tr><td><strong>🔧 AI 原生 IDE</strong></td><td>Cursor, Windsurf</td><td>多檔案理解、Agent Mode、MCP 整合</td><td>日常開發主力環境</td></tr>
-<tr><td><strong>💻 Copilot 外掛</strong></td><td>GitHub Copilot, Supermaven, Cline</td><td>行內補全、Chat 教學</td><td>維持現有 IDE 工作流</td></tr>
-<tr><td><strong>🚀 終端 AI Agent</strong></td><td>Claude Code, OpenCode, Codex CLI, Aider</td><td>自主執行任務、跑終端、修 bug</td><td>複雜重構、跨檔案修改、自動化</td></tr>
-<tr><td><strong>🔓 開源自托管 Agent</strong></td><td>Hermes Agent, OpenClaw</td><td>自部署、跨 Session 記憶、任意 LLM</td><td>隱私優先、客製化、長期運行</td></tr>
-<tr><td><strong>🎨 低代碼 + AI</strong></td><td>Retool + AI, v0 by Vercel</td><td>用 AI 生成內部工具 UI</td><td>內部工具快速開發</td></tr></table>
-<h4>各工具簡介</h4>
+<p>一個日企（Transcosmos）實測 VibeOps 方法論，專案從 <strong>15.5 人天→ 1.5 人天，減少 87%</strong>。差距每 6 個月就在拉開。</p>
 
-<table><tr><th>工具</th><th>官方連結</th><th>特點</th></tr>
-<tr><td><strong>Claude.ai</strong></td><td>anthropic.com/claude</td><td>網頁版對話，最強推理能力（Sonnet 4.6 / Opus 4.7），適合架構討論</td></tr>
-<tr><td><strong>ChatGPT</strong></td><td>chatgpt.com</td><td>OpenAI 官方介面，GPT-5.5，涵蓋 DALL-E、Code Interpreter、Memory</td></tr>
-<tr><td><strong>Gemini</strong></td><td>gemini.google.com</td><td>Google 生態整合，1M token 上下文，適合長文件分析</td></tr>
-<tr><td><strong>Cursor</strong></td><td>cursor.sh</td><td>AI 原生 IDE，Agent Mode + Composer + MCP，開發者最愛</td></tr>
-<tr><td><strong>Windsurf</strong></td><td>codeium.com/windsurf</td><td>Cascade 上下文流，MCP 整合，性價比高</td></tr>
-<tr><td><strong>GitHub Copilot</strong></td><td>github.com/features/copilot</td><td>深度整合 GitHub，行內補全，企業管理方便</td></tr>
-<tr><td><strong>Cline</strong></td><td>cline.bot</td><td>VS Code 外掛，支援多 Provider，開源免費</td></tr>
-<tr><td><strong>Claude Code</strong></td><td>anthropic.com/product/claude-code</td><td>Anthropic 官方終端 Agent，SWE-Bench 87.6%，終端-native</td></tr>
-<tr><td><strong>OpenCode</strong></td><td>opencode.ai</td><td>開源（160K+ stars），支援任意 LLM，Copilot/Ollama 免費登入</td></tr>
-<tr><td><strong>OpenAI Codex CLI</strong></td><td>github.com/openai/codex</td><td>沙盒隔離執行，Apache 2.0，企業安全流水線</td></tr>
-<tr><td><strong>Aider</strong></td><td>aider.chat</td><td>開源終端 AI，git 原生整合，支援 GPT-4o / Claude /本地模型</td></tr>
-<tr><td><strong>Hermes Agent</strong></td><td>hermes-agent.org</td><td>Nous Research 開源，跨 Session 記憶，40+ skills，可接 Telegram/Discord</td></tr>
-<tr><td><strong>OpenClaw</strong></td><td>openclaw.ai</td><td>多模型、多頻道（LINE/Telegram/Signal）、本地部署、MCP 整合</td></tr>
-<tr><td><strong>Retool + AI</strong></td><td>retool.com</td><td>用 AI 生成內部工具介面，低代碼 + AI</td></tr>
-<tr><td><strong>v0</strong></td><td>v0.dev</td><td>Vercel 出品，快速生成 React UI 原型</td></tr></table>
-<div class="source">📖 <a href="https://cursor.sh" target="_blank" rel="noopener">Cursor</a></div> / [Windsurf](https://codeium.com/windsurf) / [GitHub Copilot](https://github.com/features/copilot) / [MCP Protocol](https://modelcontextprotocol.io/) / [OpenCode](https://opencode.ai) / [Hermes Agent](https://hermes-agent.org) / [OpenClaw](https://openclaw.ai) / [Claude Code](https://www.anthropic.com/product/claude-code) / [Aider](https://aider.chat) / [Cline](https://cline.bot)
+<h3>🔬 SWE-bench Verified 實測排名（2026 年 4 月旗艦模型）</h3>
 
-<h3>選擇建議</h3>
+<table><tr><th>模型/工具</th><th>SWE-bench Verified</th><th>說明</th></tr>
+<tr><td>Claude Opus 4.7</td><td><strong>87.6%</strong></td><td>2026/4/16，1M 上下文</td></tr>
+<tr><td>GPT-5.3-Codex</td><td>85.0%</td><td>OpenAI Codex</td></tr>
+<tr><td>Claude Opus 4.6</td><td>80.8%</td><td>2026/1 前旗艦</td></tr>
+<tr><td>Claude Sonnet 4.6</td><td>79.6%</td><td>性價比首選 $3/MTok</td></tr>
+<tr><td>Gemini 3.1 Pro</td><td>80.6%</td><td>Google</td></tr>
+<tr><td>Cursor Composer 2</td><td>73.7%</td><td>Cursor 自研模型（SWE-multilingual）</td></tr>
+<tr><td>Claude Code (Sonnet)</td><td>65.7%</td><td>終端 Agent 標配</td></tr>
+<tr><td>GitHub Copilot Agent</td><td>56%</td><td>企業主流</td></tr>
+<tr><td>Devin 2.0</td><td>45.8%</td><td>雲端自主 Agent</td></tr>
+<tr><td>Aider Architect</td><td>31.4%</td><td>CLI，雙模型分工（規劃+寫入）</td></tr></table>
+<blockquote>⚠️ SWE-bench Verified（500 題）因訓練資料洩漏風險分數偏高。Scale AI SWE-bench Pro（1,865 題，多語言，防洩漏）上 Claude Opus 4.7 降至 64.3%。真實表現約在 56-65% 之間。</blockquote>
 
-<table><tr><th>你是誰</th><th>推薦工具</th><th>理由</th></tr>
-<tr><td>全端工程師</td><td>Cursor（Agent Mode + MCP）</td><td>一個環境搞定前後端</td></tr>
+<div class="source">📖 <a href="https://timewell.jp/en/columns/ai-coding-tools-complete-benchmark-2026" target="_blank" rel="noopener">TIMEWELL SWE-bench Benchmark</a></div>
+
+<p><hr></p>
+
+<h3>🗺️ 2026 年 AI 開發工具完整分類（22+ 工具）</h3>
+
+<h4>📌 使用情境雷達圖：哪個工具適合哪種任務</h4>
+
+<table><tr><th>任務類型</th><th>最推薦</th><th>替代方案</th></tr>
+<tr><td>日常小改（幾行～幾十行）</td><td><strong>Cursor</strong>（補全接受率 72%）</td><td>Copilot / Cline / Supermaven</td></tr>
+<tr><td>大規模重構（數百～數千行，多檔案）</td><td><strong>Claude Code + Opus 4.7</strong>（1M 上下文）</td><td>Cursor Composer 2 / Aider</td></tr>
+<tr><td>從零開始原型開發</td><td><strong>Devin</strong> / Claude Code（終端互動快，可隨時糾正）</td><td>Bolt.new / Replit Agent</td></tr>
+<tr><td>Jupyter / 資料科學分析</td><td><strong>RunCell</strong>（觀察當前變數狀態，逐步分析）</td><td>ChatGPT Code Interpreter</td></tr>
+<tr><td>企業安全合規（沙盒隔離）</td><td><strong>Codex CLI</strong>（Apache 2.0，企業流水線）</td><td>GitHub Copilot Enterprise</td></tr>
+<tr><td>完全免費開源</td><td><strong>Continue / Aider / Cline</strong>（MIT License，自帶 API key）</td><td>OpenCode + Ollama</td></tr>
+<tr><td>隱私優先（程式碼不上雲）</td><td><strong>Hermes Agent + Ollama</strong> / Tabnine（本地部署）</td><td>OpenClaw（本地自托管）</td></tr>
+<tr><td>無代碼快速建 MVP</td><td><strong>Bolt.new / Lovable</strong>（說話生成完整應用）</td><td>v0（只生成 React 元件）</td></tr></table>
+<p><hr></p>
+
+<h3>🌐 一、🌐 消費級 AI 助手（任何人都能用，瀏覽器打開就能用）</h3>
+
+<table><tr><th>工具</th><th>官方網站</th><th>定價</th><th>核心能力</th><th>適合場景</th></tr>
+<tr><td><strong>Claude.ai</strong></td><td>anthropic.com/claude</td><td>Pro $20/mo</td><td>最強推理（Sonnet 4.6 / Opus 4.7），超長上下文，1M token</td><td>架構討論、學新框架、複雜問題拆解</td></tr>
+<tr><td><strong>ChatGPT</strong></td><td>chatgpt.com</td><td>Free / Plus $20 / Pro $200</td><td>GPT-5.5，涵蓋 DALL-E、Code Interpreter、Memory、Canvas</td><td>快速原型、創意發想、跨領域問題</td></tr>
+<tr><td><strong>Gemini</strong></td><td>gemini.google.com</td><td>Free / Advanced $19.99/mo</td><td>Google 生態整合，1M token 上下文，Deep Research</td><td>長文件分析、多模態（文件+影片+音訊）</td></tr></table>
+<div class="source">📖 <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Anthropic Claude</a></div> / [ChatGPT](https://chatgpt.com) / [Gemini](https://gemini.google.com)
+
+<p><hr></p>
+
+<h3>💻 二、💻 IDE 外掛工具（裝在 VS Code / JetBrains 等編輯器裡）</h3>
+
+<table><tr><th>工具</th><th>官方網站</th><th>定價</th><th>核心能力</th><th>適合場景</th></tr>
+<tr><td><strong>GitHub Copilot</strong></td><td>github.com/features/copilot</td><td>Free（50 req/mo）/ Pro $10 / Pro+ $39</td><td>深度整合 GitHub 生態，行內補全，最成熟企業管理</td><td>VS Code / JetBrains 用戶，企業團隊</td></tr>
+<tr><td><strong>Cline</strong></td><td>cline.bot</td><td>免費擴充，可自帶 API key</td><td>VS Code 外掛，支援任意 LLM Provider，開源免費</td><td>想要 Copilot 替代但不付費的 VS Code 用戶</td></tr>
+<tr><td><strong>Continue</strong></td><td>hub.continue.dev</td><td>完全免費（MIT License）</td><td>VS Code / JetBrains，支援本地 Ollama，開源</td><td>隱私優先、免費、想用本地模型</td></tr>
+<tr><td><strong>Tabnine</strong></td><td>tabnine.com</td><td>Free / Pro $12/mo</td><td>企業級補全，多行預測，可完全本地部署</td><td>金融/醫療等高隱私需求企業</td></tr>
+<tr><td><strong>Supermaven</strong></td><td>supermaven.com</td><td>$10/mo</td><td>超快補全（Paul Buchheit 創辦，已被 Cursor 收購）</td><td>速度優先的開發者（技術已進入 Cursor）</td></tr>
+<tr><td><strong>Cody</strong></td><td>sourcegraph.com/cody</td><td>Free / Pro $9/mo</td><td>Sourcegraph 程式碼智慧，跨整個代碼庫理解</td><td>大型代碼庫、程式碼搜尋理解</td></tr>
+<tr><td><strong>JetBrains AI Assistant</strong></td><td>jetbrains.com/ai</td><td>內建於 Ultimate/PyCharm 等</td><td>深度整合 JetBrains IDE，程式碼理解</td><td>JetBrains 全家桶用戶</td></tr></table>
+<div class="source">📖 <a href="https://toolpod.dev/ai-coding-tools-comparison" target="_blank" rel="noopener">Toolpod — 18 Tools Compared</a></div> / [GitHub Copilot](https://github.com/features/copilot) / [Cline](https://cline.bot) / [Continue](https://hub.continue.dev) / [Tabnine](https://www.tabnine.com) / [Cody](https://sourcegraph.com/cody)
+
+<p><hr></p>
+
+<h3>🔧 三、🔧 AI 原生 IDE（不是外掛，是整個編輯器以 AI 為核心打造）</h3>
+
+<table><tr><th>工具</th><th>官方網站</th><th>定價</th><th>核心能力</th><th>適合場景</th></tr>
+<tr><td><strong>Cursor</strong></td><td>cursor.sh</td><td>Hobby 免費 / Pro $20 / Pro+ $60 / Ultra $200</td><td>AI 原生 IDE，Composer（多檔編輯）+ Agent Mode + MCP + 收購 Supermaven（72% 補全接受率）</td><td>全端開發，深度 AI 整合</td></tr>
+<tr><td><strong>Windsurf</strong></td><td>codeium.com/windsurf</td><td>免費 / Pro $15 / Business $40</td><td>Cascade 上下文流，MCP，整合 Codeium 模型</td><td>性價比最高的 AI IDE</td></tr>
+<tr><td><strong>Zed AI</strong></td><td>zed.dev</td><td>免費</td><td>高效能編輯器（Rust 開發），AI 整合，100K+ stars</td><td>注重效能、速度的開發者</td></tr>
+<tr><td><strong>Kiro</strong></td><td>amazon.com/kiro</td><td>（AWS 生態）</td><td>Amazon 新 AI IDE，深度整合 AWS 開發環境</td><td>AWS 開發者</td></tr></table>
+<div class="source">📖 <a href="https://cursor.sh" target="_blank" rel="noopener">Cursor</a></div> / [Windsurf](https://codeium.com/windsurf) / [Zed](https://zed.dev) / [Toolpod Windsurf](https://toolpod.dev/ai-coding-tools-comparison)
+
+<p><hr></p>
+
+<h3>🚀 四、🚀 終端 AI Agent（命令行直接跑，適合複雜重構和自動化）</h3>
+
+<table><tr><th>工具</th><th>官方網站</th><th>定價</th><th>核心能力</th><th>適合場景</th></tr>
+<tr><td><strong>Claude Code</strong></td><td>anthropic.com/product/claude-code</td><td>Pro $20 / Max 5x $100 / Max 20x $200</td><td>Anthropic 官方，Opus 4.7（87.6% SWE），1M 上下文，Plan Mode + Dreaming + Outcomes，支援 MCP</td><td>複雜重構、跨檔案修改、終端工作流</td></tr>
+<tr><td><strong>OpenCode</strong></td><td>opencode.ai</td><td>免費開源（MIT）</td><td>Go 開發，任意 LLM Provider（Copilot 免費登入/Ollama 本地），TUI 介面，160K+ stars</td><td>想擺脫供應商鎖定、免費用 Copilot、本地跑</td></tr>
+<tr><td><strong>OpenAI Codex CLI</strong></td><td>github.com/openai/codex</td><td>ChatGPT Plus $20 / API 計費</td><td>沙盒隔離執行，Apache 2.0 開源，多 Agent 流水線，企業安全合規</td><td>企業安全流水線、程式碼審查</td></tr>
+<tr><td><strong>Aider</strong></td><td>aider.chat</td><td>完全免費（只有 API 費用）</td><td>git 原生整合，Architect（規劃）+ Editor（寫入）雙模型分工，支援任意 LLM</td><td>想要嚴格人類審核的 CLI 工作流</td></tr>
+<tr><td><strong>Devin 2.0</strong></td><td>cognitus.ai</td><td>Core $20 + 用量</td><td>Cognition AI 雲端自主 Agent，Spec→30 分鐘自主完成，不用盯著</td><td>新專案原型、沒有複雜邏輯的任務</td></tr></table>
+<div class="source">📖 <a href="https://timewell.jp/en/columns/ai-coding-tools-complete-benchmark-2026" target="_blank" rel="noopener">TIMEWELL Benchmark</a></div> / [Kanaries Best AI Coding Tools](https://docs.kanaries.net/articles/best-ai-coding-tools-2026) / [OpenCode](https://opencode.ai) / [Aider](https://aider.chat) / [Devin](https://cognitus.ai)
+
+<p><hr></p>
+
+<h3>🔓 五、🔓 開源自托管 Agent 平台（程式碼留在自己伺服器，適合隱私和客製化）</h3>
+
+<table><tr><th>工具</th><th>GitHub</th><th>Stars</th><th>核心能力</th><th>適合場景</th></tr>
+<tr><td><strong>OpenClaw</strong></td><td>github.com/openclaw/openclaw</td><td><strong>280,000+</strong></td><td>多模型、多頻道（LINE/Telegram/Signal/WhatsApp/Discord）、本地部署、MCP 整合、ClawHub 13,729+ 技能擴展</td><td>你自己在用的！個人自動化、多頻道整合</td></tr>
+<tr><td><strong>Hermes Agent</strong></td><td>github.com/NousResearch/hermes-agent</td><td><strong>57,000+</strong></td><td>Nous Research（2026/2），跨 Session 記憶，40+ 內建技能，agentskills.io 開源技能標準，自然語言 Cron，Telegram/Discord/Slack/WhatsApp</td><td>自主個人助理、程式碼不上雲</td></tr>
+<tr><td><strong>AutoGen</strong></td><td>github.com/microsoft/autogen</td><td>54,600+</td><td>Microsoft Research，多 Agent 對話，企業級觀測，Azure 整合</td><td>企業多 Agent 系統、複雜工作流</td></tr>
+<tr><td><strong>CrewAI</strong></td><td>github.com/crewai/crewai</td><td>44,300+</td><td>角色扮演式多 Agent，月下載 520 萬次，5 分鐘啟動</td><td>快速原型、多 Agent 協作</td></tr>
+<tr><td><strong>LangGraph</strong></td><td>github.com/langchain-ai/langgraph</td><td>—</td><td>精確狀態機控制，有向圖工作流，最細粒度控制</td><td>需要嚴格流程控制的生產系統</td></tr>
+<tr><td><strong>Mastra</strong></td><td>github.com/mastra-ai/mastra</td><td>—</td><td>TypeScript 原生，TypeScript 開發者友好，輕量快速</td><td>TS/JS 團隊自建 Agent</td></tr>
+<tr><td><strong>n8n</strong></td><td>github.com/n8n-io/n8n</td><td>—</td><td>工作流自動化 + AI 節點，視覺化，無需寫程式</td><td>非技術團隊、工作流程自動化</td></tr>
+<tr><td><strong>LangChain</strong></td><td>github.com/langchain-ai/langchain</td><td>—</td><td>最大眾化的 LLM 應用框架，文件豐富，生態成熟</td><td>快速建 LLM 應用原型</td></tr></table>
+<div class="source">📖 <a href="https://www.aimagicx.com/blog/best-open-source-ai-agent-frameworks-2026" target="_blank" rel="noopener">AI MagicX — Open-Source Agent Frameworks 2026</a></div> / [Hundred Tabs — Best Open-Source AI Agents](https://hundredtabs.com/blog/best-open-source-ai-agents-2026) / [OpenClaw GitHub](https://github.com/openclaw/openclaw) / [Hermes Agent](https://hermes-agent.org)
+
+<p><hr></p>
+
+<h3>🎨 六、🎨 低代碼 / 無代碼 AI 應用建構工具</h3>
+
+<table><tr><th>工具</th><th>官方網站</th><th>定價</th><th>核心能力</th><th>適合場景</th></tr>
+<tr><td><strong>v0</strong></td><td>v0.dev</td><td>免費基本版</td><td>Vercel 出品，用 Prompt 生成 React UI 元件</td><td>前端工程師快速生成 UI</td></tr>
+<tr><td><strong>Bolt.new</strong></td><td>bolt.new</td><td>$20/mo</td><td>StackBlitz AI，說一句話就能生成完整全端應用</td><td>非技術 founder、MVP 快速驗證</td></tr>
+<tr><td><strong>Lovable</strong></td><td>lovable.dev</td><td>$20/mo</td><td>無代碼 AI，生成完整產品，支援 Supabase 後端</td><td>非技術團隊，快速建產品</td></tr>
+<tr><td><strong>Replit Agent</strong></td><td>replit.com</td><td>$20/mo</td><td>瀏覽器 IDE + AI，雲端環境，開箱即用</td><td>新手學 coding、跨平台快速原型</td></tr></table>
+<div class="source">📖 <a href="https://toolpod.dev/ai-coding-tools-comparison" target="_blank" rel="noopener">Toolpod</a></div> / [v0](https://v0.dev) / [Bolt.new](https://bolt.new) / [Lovable](https://lovable.dev)
+
+<p><hr></p>
+
+<h3>📊 七、📊 資料科學 / Jupyter 專用 AI</h3>
+
+<table><tr><th>工具</th><th>官方網站</th><th>定價</th><th>核心能力</th><th>適合場景</th></tr>
+<tr><td><strong>RunCell</strong></td><td>runcell.dev</td><td>Pro $20 / Pro+ $60 / Team $40</td><td>JupyterLab 擴充，觀察當前變數狀態逐步分析，不像通用 Agent 那樣一次生成 10 個 Cell 造成幻覺</td><td>資料分析、pandas、視覺化、機器學習</td></tr></table>
+<div class="source">📖 <a href="https://docs.kanaries.net/articles/best-ai-coding-tools-2026" target="_blank" rel="noopener">Kanaries — RunCell</a></div>
+
+<p><hr></p>
+
+<h3>💡 八、選擇建議：你是哪種開發者？</h3>
+
+<table><tr><th>你是誰</th><th>推薦工具組合</th><th>理由</th></tr>
+<tr><td>全端工程師</td><td>Cursor（日常）+ Claude Code（重構）</td><td>補全+聊天+Agent 一次滿足</td></tr>
 <tr><td>後端工程師</td><td>Claude Code + Cursor</td><td>終端導向，最強 coding 模型</td></tr>
 <tr><td>前端工程師</td><td>Cursor + v0</td><td>v0 做 UI 原型，Cursor 精修</td></tr>
+<tr><td>資料科學家</td><td>RunCell + Claude.ai</td><td>Jupyter 內逐步分析 + 架構討論</td></tr>
 <tr><td>DevOps / SRE</td><td>Claude Code + 終端 AI</td><td>自動化腳本、日誌分析</td></tr>
-<tr><td>新手工程師</td><td>GitHub Copilot（補全）+ Cursor（Chat）</td><td>漸進式學習，不會被 Agent 搞混</td></tr>
-<tr><td>技術主管</td><td>Claude.ai / ChatGPT（架構討論）+ Cursor（驗證想法）</td><td>戰略層面用大模型，戰術層面用 AI IDE</td></tr>
-<tr><td>開源愛好者</td><td>OpenCode + Ollama</td><td>完全開源、本地運行、零成本</td></tr>
-<tr><td>隱私優先者</td><td>Hermes Agent + Ollama</td><td>程式碼不出本機，跨 Session 記憶</td></tr>
-<tr><td>自建 Agent 平台</td><td>OpenClaw</td><td>多模型、多頻道、本地部署、MCP</td></tr>
-<tr><td>企業安全合規</td><td>OpenAI Codex CLI（沙盒）+ GitHub Copilot</td><td>沙盒隔離 + 企業管理控制台</td></tr>
+<tr><td>新手工程師</td><td>GitHub Copilot（補全）+ Replit Agent</td><td>漸進學習，不用被 Agent 搞混</td></tr>
+<tr><td>技術主管</td><td>Claude.ai（架構）+ Cursor（驗證）+ Bolt.new（MVP）</td><td>戰略大模型，戰術 AI IDE</td></tr>
+<tr><td>開源愛好者</td><td>OpenCode + Ollama + Continue</td><td>完全免費、本地運行、零成本</td></tr>
+<tr><td>隱私優先者</td><td>Hermes Agent + Ollama（本地）</td><td>程式碼終身不上雲</td></tr>
+<tr><td>企業安全合規</td><td>Codex CLI（沙盒）+ GitHub Copilot Enterprise</td><td>沙盒隔離 + 企業管理控制台</td></tr>
+<tr><td>非技術 founder</td><td>Bolt.new + Lovable</td><td>說話生成完整應用</td></tr>
+<tr><td>AWS 開發者</td><td>Amazon Q Developer + Kiro</td><td>深度整合 AWS 生態</td></tr>
+<tr><td>自建 Agent 平台</td><td><strong>OpenClaw</strong> + Hermes Agent</td><td>多頻道、多模型、本地部署（你們自己在用的！）</td></tr>
 <tr><td>企業安全團隊</td><td>Codex CLI</td><td>沙盒隔離、Apache 2.0 開源</td></tr></table>
 <p><hr></p>
 
