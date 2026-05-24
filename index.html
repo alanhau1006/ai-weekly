@@ -59,6 +59,7 @@
     <a href="#s3">💡 Use Cases</a>
     <a href="#s4">🛠 How to Use AI</a>
     <a href="#s5">🏛 組織轉變</a>
+    <a href="#s6">👩‍💻 工程師 AI 實戰指南</a>
 </div></nav>
 <div class="hero">
   <h1>AI 週報 2026/05/18–05/24</h1>
@@ -1052,6 +1053,382 @@
 </ul><hr>
 
 <em>資料來源：[AI Fieldbook](https://aifieldbook.com/insights) / [TechEx North America 2026](https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/) / [Laserfiche AI Agents](https://www.artificialintelligence-news.com/news/laserfiche-ai-agents-act-autonomously-for-the-platforms-users/) / [Anthropic](https://www.anthropic.com) / [Deloitte](https://www.deloitte.com/global/en/our-thinking/insights/topics/technology/tech-trends/autonomous-intelligence-agentic-ai.html) / [Microsoft](https://github.com/microsoft/agent-governance-toolkit)</em>
+</section><section id="s6">
+<h2>第六段：工程師的 AI 實戰指南 — 如何善用 AI 提升工作效率</h2>
+
+<blockquote>本段聚焦：工程師在日常開發、除錯、架構設計中如何有效使用 AI 工具，以及 2026 年業界的最新工作流觀察</blockquote>
+<blockquote>靈感來源：[@akshay_pachaar 在 X 的分享](https://x.com/akshay_pachaar/status/2058187317509275760)</blockquote>
+
+<p><hr></p>
+
+<h3>6.1 AI 輔助開發的工具全景：2026 年工程師的必備武器庫</h3>
+
+<div class="source">📖 <a href="https://cursor.sh" target="_blank" rel="noopener">Cursor — AI Code Editor</a></div>
+<div class="source">📖 <a href="https://codeium.com/windsurf" target="_blank" rel="noopener">Windsurf — AI IDE</a></div>
+<div class="source">📖 <a href="https://github.com/features/copilot" target="_blank" rel="noopener">GitHub Copilot</a></div>
+<div class="source">📖 <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener">MCP Protocol — Tool Integration Standard</a></div>
+
+<h3>工具分類矩陣</h3>
+
+<table><tr><th>類別</th><th>代表工具</th><th>核心能力</th><th>適合場景</th></tr>
+<tr><td><strong>AI 原生 IDE</strong></td><td>Cursor, Windsurf</td><td>多檔案理解、Agent Mode、MCP 整合</td><td>日常開發主力環境</td></tr>
+<tr><td><strong>Copilot 外掛</strong></td><td>GitHub Copilot, Supermaven</td><td>行內補全、Chat 教學</td><td>維持現有 IDE 工作流</td></tr>
+<tr><td><strong>Agent 框架</strong></td><td>Claude Code, OpenAI Codex CLI</td><td>自主執行任務、跑終端、修 bug</td><td>複雜重構、跨檔案修改</td></tr>
+<tr><td><strong>低代碼 + AI</strong></td><td>Retool + AI, v0 by Vercel</td><td>用 AI 生成內部工具 UI</td><td>內部工具快速開發</td></tr>
+<tr><td><strong>終端 AI</strong></td><td>Aider, Continue.dev</td><td>CLI 介面 AI 輔助</td><td>喜歡終端工作流的開發者</td></tr></table>
+<h3>選擇建議</h3>
+
+<table><tr><th>你是誰</th><th>推薦工具</th><th>理由</th></tr>
+<tr><td>全端工程師</td><td>Cursor（Agent Mode + MCP）</td><td>一個環境搞定前後端</td></tr>
+<tr><td>後端工程師</td><td>Cursor + Aider</td><td>終端導向，適合系統程式</td></tr>
+<tr><td>前端工程師</td><td>Cursor + v0</td><td>v0 做 UI 原型，Cursor 精修</td></tr>
+<tr><td>DevOps / SRE</td><td>Claude Code + 終端 AI</td><td>自動化腳本、日誌分析</td></tr>
+<tr><td>新手工程師</td><td>GitHub Copilot（補全）+ Cursor（Chat）</td><td>漸進式學習，不會被 Agent 搞混</td></tr>
+<tr><td>技術主管</td><td>ChatGPT/Claude（架構討論）+ Cursor（驗證想法）</td><td>戰略層面用大模型，戰術層面用 AI IDE</td></tr></table>
+<p><hr></p>
+
+<h3>6.2 Prompt 工程：工程師版本的實戰技巧</h3>
+
+<div class="source">📖 <a href="https://aifieldbook.com/insights/ai-training-upskilling" target="_blank" rel="noopener">AI Fieldbook — Training and Upskilling for the AI Era</a></div>
+
+<h3>❌ 常見錯誤寫法（工程師特有）</h3>
+
+<table><tr><th>錯誤</th><th>問題</th><th>改法</th></tr>
+<tr><td>「幫我寫一個 API」</td><td>太模糊，AI 不知道語言、框架、資料結構</td><td>「用 Node.js + Express 寫一個 REST API，有 /users 端點，支援 GET/POST，資料用 PostgreSQL，回傳 JSON」</td></tr>
+<tr><td>「這段 code 有 bug，幫我修」</td><td>沒說什麼 bug、什麼症狀</td><td>「這段 Python 函式在輸入空 list 時丟 IndexError，預期應回傳空 list，幫我修」</td></tr>
+<tr><td>「重構這個檔案」</td><td>範圍太大，AI 亂改</td><td>「把這個 500 行的 utils.py 依功能拆成 3 個模組：string_utils.py、date_utils.py、file_utils.py，保持所有既有測試通過」</td></tr>
+<tr><td>一次貼整個 repo</td><td>上下文太長，AI 迷失</td><td>分步驟：先問架構分析，再逐檔修改</td></tr></table>
+<h3>✅ 工程師專用的 Prompt 模板</h3>
+
+<h4>模板 1：功能開發</h4>
+<p><pre><code>我要實作 [功能名稱]
+技術棧：[語言/框架/DB]
+輸入：[具體描述]
+輸出：[具體描述]
+邊界條件：[列出 2-3 個]
+測試要求：[單元測試？整合測試？]
+請先給我架構設計，確認後再寫代碼</code></pre></p>
+
+<h4>模板 2：Bug 修復</h4>
+<p><pre><code>問題：[症狀描述]
+重現步驟：[1, 2, 3]
+預期行為：[應該怎樣]
+實際行為：[實際怎樣]
+環境：[OS / 語言版本 / 框架版本]
+相關日誌：[貼錯誤訊息]</code></pre></p>
+
+<h4>模板 3：Code Review</h4>
+<p><pre><code>請 review 以下 PR：
+- 檢查：安全性、效能、可維護性、測試覆蓋率
+- 不要改的：[列出不想動的部分]
+- 特別關注：[指出你最擔心的地方]
+- 回覆格式：[問題列表 + 嚴重度 + 建議修法]</code></pre></p>
+
+<h4>模板 4：架構決策</h4>
+<p><pre><code>我們要在 [現有系統] 中加入 [新能力]
+目前架構：[簡述]
+候選方案：[A vs B vs C]
+評估維度：開發速度、可擴展性、運維成本、團隊熟悉度
+請給我每個方案的 pros/cons 和推薦</code></pre></p>
+
+<p><hr></p>
+
+<h3>6.3 Cursor Agent Mode 的正確使用方式</h3>
+
+<div class="source">📖 <a href="https://cursor.sh" target="_blank" rel="noopener">Cursor — AI Code Editor</a></div>
+<div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/" target="_blank" rel="noopener">AI Expo 2026 Day 2 — Developer Workflow Changes</a></div>
+
+<h3>Agent Mode ≠ 萬能助手</h3>
+
+<p>AI Expo 2026 的開發者工作流座談會（Valae, Charles River Labs, Knight Frank）指出：<strong>AI Copilot 加速了代碼生成，但同時迫使開發者把更多精力放在 review 和架構上</strong>。這是一個根本性的角色轉變。</p>
+
+<h3>工作流對比</h3>
+
+<table><tr><th>維度</th><th>傳統工作流</th><th>AI Agent 工作流</th></tr>
+<tr><td>寫代碼</td><td>人類主要活動</td><td>Agent 主要活動</td></tr>
+<tr><td>Review</td><td>偶爾（PR review）</td><td><strong>高頻率、持續的</strong>——每次 AI 產出都要審查</td></tr>
+<tr><td>架構設計</td><td>開發前做</td><td><strong>開發中和開發後都要做</strong>——確保 Agent 沒偏離</td></tr>
+<tr><td>除錯</td><td>大部分時間</td><td>少部分——Agent 能自行修簡單 bug</td></tr>
+<tr><td>測試</td><td>手動寫</td><td>Agent 寫初版，人類驗證覆蓋率</td></tr></table>
+<h3>Agent Mode 的五條軍規</h3>
+
+<ul><li><strong>小任務、小提交</strong>：不要一次讓 Agent 改 20 個檔案。一次一個功能點，提交後再下一個</li>
+<li><strong>先寫測試，再讓 Agent 實作</strong>：TDD + AI = 最安全的組合。紅燈 → 讓 Agent 實作 → 綠燈</li>
+<li><strong>每次產出都要 review</strong>：Agent 的代碼可能「看起來對但邏輯有問題」。特別注意：</li>
+</ul>- 邊界條件是否處理
+<p>- 錯誤處理是否完整</p>
+<p>- 是否引入了不必要的依賴</p>
+<ul><li><strong>用 <code>.cursorrules</code> 定義規範</strong>：讓 Agent 遵守團隊的 coding style、命名慣例、架構模式</li>
+<li><strong>MCP 是你的超能力</strong>：連接內部 API 文件、資料庫 schema、設計系統，讓 Agent 在你的上下文裡工作</li>
+
+</ul><h3><code>.cursorrules</code> 範例</h3>
+
+<p><pre><code># Project Rules
+
+## Tech Stack
+- Frontend: React 18 + TypeScript + Tailwind CSS
+- Backend: Node.js + Express + Prisma ORM
+- Database: PostgreSQL 15
+
+## Coding Conventions
+- Use functional components, not class components
+- Prefer named exports
+- Use Zod for runtime validation
+- All API endpoints must have input validation
+- Error handling: use Result pattern, not try/catch in controllers
+
+## Architecture
+- Feature-based folder structure: src/features/[feature]/
+- Each feature has: routes, controller, service, types, tests
+- Shared utilities in src/shared/
+
+## Testing
+- Jest + React Testing Library
+- Minimum 80% coverage for new code
+- Integration tests for API endpoints
+- Unit tests for service layer</code></pre></p>
+
+<p><hr></p>
+
+<h3>6.4 工程師的 AI 技能地圖：從入門到精通</h3>
+
+<div class="source">📖 <a href="https://aifieldbook.com/insights/building-ai-talent-strategy" target="_blank" rel="noopener">AI Fieldbook — AI Talent Playbook: Build, Buy, Borrow, or Bot</a></div>
+<div class="source">📖 <a href="https://aifieldbook.com/insights/ai-training-upskilling" target="_blank" rel="noopener">AI Fieldbook — Training and Upskilling for the AI Era</a></div>
+
+<h3>AI Fieldbook 的技能分層（2026/4/24）</h3>
+
+<p>AI Fieldbook 將 AI 時代的技能分為五個層級，每個層級對應不同的角色需求：</p>
+
+<table><tr><th>層級</th><th>技能</th><th>誰需要</th><th>學習路徑</th></tr>
+<tr><td><strong>AI 素養</strong></td><td>理解 AI 能做什麼、不能做什麼</td><td>所有人</td><td>內部 workshop + 線上課程</td></tr>
+<tr><td><strong>數據素養</strong></td><td>讀數據、問對問題、理解數據品質</td><td>大部分角色</td><td>數據分析基礎課程</td></tr>
+<tr><td><strong>AI 應用</strong></td><td>在業務流程中識別 AI 機會、與技術團隊協作</td><td>業務角色</td><td>專案實作 + 導師制</td></tr>
+<tr><td><strong>技術 AI</strong></td><td>Data Science、ML Engineering、MLOps</td><td>專業角色</td><td>正規培訓 + 認證</td></tr>
+<tr><td><strong>人類技能</strong></td><td>批判性思考、創造力、同理心</td><td>所有人</td><td>持續練習 + 反思</td></tr></table>
+<h3>工程師專屬的 AI 技能路線圖</h3>
+
+<h4>🟢 Level 1：AI 使用者（1-2 週上手）</h4>
+<ul><li>[ ] 學會用 AI IDE（Cursor / Windsurf）的 Tab 補全和 Chat</li>
+<li>[ ] 能寫出有效的 prompt（參考 6.2 模板）</li>
+<li>[ ] 能判斷 AI 生成的代碼是否正確</li>
+<li>[ ] 用 AI 輔助學習新框架/語言</li>
+
+</ul><h4>🟡 Level 2：AI 協作者（1-2 個月）</h4>
+<ul><li>[ ] 熟練使用 Agent Mode 做多檔案修改</li>
+<li>[ ] 設定 <code>.cursorrules</code> / <code>.windsurfrules</code> 定義專案規範</li>
+<li>[ ] 用 MCP 連接內部系統（資料庫、API 文件）</li>
+<li>[ ] 用 AI 做 Code Review（給 AI 你的 PR，讓它找問題）</li>
+<li>[ ] 學會看 token 成本，避免 Agent 跑出天價帳單</li>
+
+</ul><h4>🔴 Level 3：AI 編排者（3-6 個月）</h4>
+<ul><li>[ ] 設計多 Agent 協作工作流（研究 Agent + 實作 Agent + 測試 Agent）</li>
+<li>[ ] 建立團隊的 AI 使用規範和最佳實踐</li>
+<li>[ ] 用 AI 建立自動化流水線（AI 寫代碼 → AI 跑測試 → AI 做 PR review）</li>
+<li>[ ] 在團隊中推廣 AI 工具使用，擔任 AI Champion</li>
+<li>[ ] 理解並應用 AI 治理框架（Microsoft Toolkit / IMDA 風險分級）</li>
+
+</ul><h4>⚫ Level 4：AI 原生架構師（6+ 個月）</h4>
+<ul><li>[ ] 設計 AI-native 的系統架構（Agentic API、Agent Orchestration）</li>
+<li>[ ] 建立企業級 AI Agent 治理體系</li>
+<li>[ ] 領導 AI 轉型專案，從 Pilot 推到生產</li>
+<li>[ ] 參與制定行業 AI 標準和最佳實踐</li>
+
+</ul><hr>
+
+<h3>6.5 真實工作流：工程師的一天（AI 增強版）</h3>
+
+<div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/" target="_blank" rel="noopener">AI Expo 2026 Day 2 — Developer Workflow Panel</a></div>
+<div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/scaling-ai-value-beyond-pilot-phase-purgatory/" target="_blank" rel="noopener">IBM — AI Consulting Platform 50% productivity boost</a></div>
+
+<h3>早盤：規劃與理解（08:00 - 10:00）</h3>
+
+<table><tr><th>時間</th><th>任務</th><th>AI 怎麼幫</th></tr>
+<tr><td>08:00</td><td>看 JIRA/Linear ticket</td><td>AI 摘要昨天 PR review 的反饋</td></tr>
+<tr><td>08:15</td><td>理解需求</td><td>貼 ticket 描述 → ChatGPT/Claude 分析需求、列出不確定點</td></tr>
+<tr><td>08:30</td><td>技術調研</td><td>「這個功能用 WebSocket 還是 SSE？比較優缺點」→ AI 給出分析</td></tr>
+<tr><td>09:00</td><td>架構設計</td><td>在 Cursor 中畫出模組邊界 → Agent 生成介面定義</td></tr></table>
+<h3>中盤：實作與除錯（10:00 - 16:00）</h3>
+
+<table><tr><th>時間</th><th>任務</th><th>AI 怎麼幫</th></tr>
+<tr><td>10:00</td><td>寫代碼</td><td>Cursor Tab 補全 + Agent Mode 實作模組</td></tr>
+<tr><td>11:00</td><td>寫測試</td><td>「根據這個 service 層的方法，生成 Jest 單元測試，覆蓋 happy path + 邊界條件」</td></tr>
+<tr><td>13:00</td><td>除錯</td><td>貼錯誤日誌 → AI 定位問題行 → Agent 提出修復 → 人類 review</td></tr>
+<tr><td>14:30</td><td>重構</td><td>Agent Mode：「把這個 god class 拆成 3 個 service，保持測試通過」</td></tr>
+<tr><td>15:30</td><td>文件</td><td>「根據代碼生成 API 文件，OpenAPI 3.0 格式」</td></tr></table>
+<h3>晚盤：交付與學習（16:00 - 18:00）</h3>
+
+<table><tr><th>時間</th><th>任務</th><th>AI 怎麼幫</th></tr>
+<tr><td>16:00</td><td>PR Review</td><td>AI 做 first pass review，標記潛在問題</td></tr>
+<tr><td>16:30</td><td>寫 PR 描述</td><td>「根據 git diff 生成 PR 描述，包含變更摘要和測試計畫」</td></tr>
+<tr><td>17:00</td><td>學習</td><td>「解釋這段 Rust lifetime 語法的意思，用 JS 開發者的角度」</td></tr>
+<tr><td>17:30</td><td>明日規劃</td><td>AI 摘要今天的進度，建議明天的優先事項</td></tr></table>
+<h3>效率數據（業界參考）</h3>
+
+<div class="source">📖 <a href="https://www.databricks.com/blog/ai-developer-productivity-2026" target="_blank" rel="noopener">Databricks — AI-Assisted Developer Productivity</a></div>
+<div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/scaling-ai-value-beyond-pilot-phase-purgatory/" target="_blank" rel="noopener">IBM Consulting Platform — 50% Productivity Boost</a></div>
+
+<table><tr><th>指標</th><th>傳統開發</th><th>AI 輔助開發</th><th>提升幅度</th></tr>
+<tr><td>代碼生成速度</td><td>基線</td><td>3-5x</td><td>200-400%</td></tr>
+<tr><td>開發者整體生產力</td><td>基線</td><td>+30-55%</td><td>30-55%</td></tr>
+<tr><td>Bug 密度</td><td>基線</td><td>-20-40%</td><td>20-40% 降低</td></tr>
+<tr><td>新手上手時間</td><td>基線</td><td>-50%+</td><td>50%+ 縮短</td></tr>
+<tr><td>IBM 內部顧問生產力</td><td>基線</td><td>+50%</td><td>50%</td></tr></table>
+<p>⚠️ <strong>重要提醒</strong>：代碼生成速度 ≠ 整體生產力。AI 幫你寫得快，但你 review 的時間增加了。真正提升來自「更多時間思考架構和業務邏輯，更少時間做重複性編碼」。</p>
+
+<p><hr></p>
+
+<h3>6.6 AI 輔助除錯：從「印 log」到「AI 分析」</h3>
+
+<h3>除錯的 AI 加持路徑</h3>
+
+<table><tr><th>層級</th><th>方法</th><th>AI 角色</th></tr>
+<tr><td><strong>L1：症狀分析</strong></td><td>貼錯誤訊息 → AI 解讀</td><td>快速理解 stack trace、定位 root cause</td></tr>
+<tr><td><strong>L2：日誌分析</strong></td><td>貼多行 log → AI 找模式</td><td>從數百行日誌中提取時間線和異常模式</td></tr>
+<tr><td><strong>L3：代碼推理</strong></td><td>貼可疑代碼段 → AI 追蹤邏輯</td><td>「這個 race condition 可能在哪裡發生？」</td></tr>
+<tr><td><strong>L4：自動修復</strong></td><td>Agent Mode 自動修 bug</td><td>Agent 找 bug → 提出修復 → 跑測試 → 人類確認</td></tr></table>
+<h3>除錯 Prompt 範例</h3>
+
+<p><pre><code>我在生產環境遇到以下錯誤：
+
+[貼 stack trace]
+
+環境：
+- Node.js 20.x
+- PostgreSQL 15
+- Prisma 5.x
+- 發生頻率：約每 1000 次請求 1 次
+
+懷疑是 race condition，因為：
+1. 只在高併發時發生
+2. 錯誤指向一個 should-be-unique 的 constraint
+
+幫我：
+1. 確認是否是 race condition
+2. 找出具體的競爭點
+3. 給我修復方案（樂觀鎖 vs 悲觀鎖 vs 應用層冪等）</code></pre></p>
+
+<p><hr></p>
+
+<h3>6.7 團隊協作：AI 在 Code Review 和知識分享中的角色</h3>
+
+<div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/" target="_blank" rel="noopener">AI Expo 2026 Day 2 — Microsoft/Lloyds/Mastercard Panel</a></div>
+<div class="source">📖 <a href="https://aifieldbook.com/insights/communicating-ai-change" target="_blank" rel="noopener">AI Fieldbook — AI Communication & Buy-in</a></div>
+
+<h3>AI 做第一輪 Code Review</h3>
+
+<p>AI Expo 2026 的 Microsoft / Lloyds / Mastercard 座談會指出：<strong>開發者需要新的技能來充分驗證 AI 生成的代碼</strong>，這是目前工作力能力的最大缺口。</p>
+
+<table><tr><th>Review 階段</th><th>誰做</th><th>做什麼</th></tr>
+<tr><td><strong>第一輪</strong></td><td>AI</td><td>語法錯誤、風格一致性、安全性掃描、測試覆蓋率</td></tr>
+<tr><td><strong>第二輪</strong></td><td>人類</td><td>業務邏輯正確性、架構一致性、邊界條件、可維護性</td></tr>
+<tr><td><strong>第三輪</strong></td><td>人類（資深）</td><td>系統設計、效能影響、跨團隊依賴</td></tr></table>
+<h3>知識分享的 AI 加持</h3>
+
+<ul><li><strong>新人 Onboarding</strong>：用 AI 生成專案導覽——「這個 repo 的架構是什麼？核心模組有哪些？資料流怎麼走？」</li>
+<li><strong>會議記錄</strong>：AI 轉錄 + 摘要 + 行動項目提取</li>
+<li><strong>文件生成</strong>：從代碼自動生成 API 文件、架構圖、README</li>
+<li><strong>Q&A Bot</strong>：用 RAG 架構建立團隊知識庫，新人可以問「上次那個支付 bug 怎麼解的？」</li>
+
+</ul><hr>
+
+<h3>6.8 AI 使用的常見陷阱與防治</h3>
+
+<div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-1-governance-data-readiness-enable-agentic-enterprise/" target="_blank" rel="noopener">AI Expo 2026 Day 1 — Governance & Data Readiness</a></div>
+<div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/" target="_blank" rel="noopener">TechEx 2026 — Shadow AI & Cybersecurity</a></div>
+
+<h3>🚫 工程師最常犯的 5 個 AI 錯誤</h3>
+
+<table><tr><th>#</th><th>錯誤</th><th>後果</th><th>防治</th></tr>
+<tr><td>1</td><td><strong>盲信 AI 輸出</strong></td><td>上線後才發現邏輯錯誤</td><td>每次都要 review，特別注意邊界條件和錯誤處理</td></tr>
+<tr><td>2</td><td><strong>貼敏感資料到公開 AI</strong></td><td>API key、密碼、客戶資料外洩</td><td>使用企業版 AI 工具，設定 .env 和 secret 掃描</td></tr>
+<tr><td>3</td><td><strong>過度依賴 AI 做決策</strong></td><td>失去對架構的理解，AI 幻覺時無法判斷</td><td>AI 是顧問，不是主管——最終決策權在你</td></tr>
+<tr><td>4</td><td><strong>一次改太多</strong></td><td>Agent 一次改 30 個檔案，出問題不知道哪裡壞了</td><td>小步提交，每次改 1-3 個檔案</td></tr>
+<tr><td>5</td><td><strong>不看成本</strong></td><td>Agent 跑了 2 小時，token 帳單 US$50+</td><td>設定 token 上限，用 Agent Governance Toolkit</td></tr></table>
+<h3>🛡 Shadow AI 防治（工程師版）</h3>
+
+<p>TechEx 2026 Cyber Security 軌道的核心警告：<strong>員工在業務流程中使用未批准的 AI 服務，且通常沒有活動日誌</strong>。</p>
+
+<p>工程師的 Shadow AI 場景：</p>
+<ul><li>用 ChatGPT 免費版除錯，貼了生產環境的日誌（含客戶資料）</li>
+<li>用未批准的 AI Code Review 工具掃描私有 repo</li>
+<li>在個人 Copilot 帳號中處理公司代碼</li>
+
+</ul><strong>解決方案</strong>：
+<ul><li>使用公司批准的 AI 工具（企業版 Cursor、Azure OpenAI、AWS Bedrock）</li>
+<li>設定 pre-commit hook 掃描敏感資料</li>
+<li>部署 [Microsoft Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) 監控 Agent 行為</li>
+
+</ul><hr>
+
+<h3>6.9 從「寫代碼的人」到「指揮 AI 的人」：心態轉變</h3>
+
+<div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/" target="_blank" rel="noopener">AI Expo 2026 Day 2 — Future AI Developer Skills</a></div>
+<div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-1-governance-data-readiness-enable-agentic-enterprise/" target="_blank" rel="noopener">AI Expo 2026 Day 1 — Illusion of AI Readiness</a></div>
+
+<h3>AI Expo 2026 的核心洞察</h3>
+
+<strong>IBM 的 Paul Fermor 警告</strong>：傳統自動化思維嚴重低估了 AI 採用的複雜度——他稱之為「AI 準備度的幻覺（illusion of AI readiness）」。
+
+<strong>Retool 的 Alexis Ego 展示</strong>：用 AI + 低代碼平台製作生產級的內部應用——目標是削減內部工具請求的積壓。
+
+<h3>新舊技能對比</h3>
+
+<table><tr><th>傳統工程師技能</th><th>AI 時代工程師技能</th></tr>
+<tr><td>寫代碼（主要產出）</td><td><strong>Review + 架構設計</strong>（主要產出）</td></tr>
+<tr><td>記住 API 和語法</td><td><strong>問對問題、寫對 prompt</strong></td></tr>
+<tr><td>手動除錯</td><td><strong>AI 輔助分析 + 人類判斷</strong></td></tr>
+<tr><td>單打獨鬥</td><td><strong>指揮 AI Agent 團隊</strong></td></tr>
+<tr><td>追求代碼完美</td><td><strong>追求速度 + 可驗證性</strong></td></tr>
+<tr><td>「我自己來」</td><td><strong>「我來判斷，AI 來執行」</strong></td></tr></table>
+<h3>關鍵心態轉變</h3>
+
+<ul><li><strong>從創作者到審查者</strong>：你不再是最會寫代碼的人，但你是<strong>最能判斷代碼好壞的人</strong></li>
+<li><strong>從記憶到檢索</strong>：不需要記住所有 API，但要<strong>知道問什麼問題</strong></li>
+<li><strong>從完美到迭代</strong>：先用 AI 快速原型，再逐步打磨</li>
+<li><strong>從執行到設計</strong>：把重複性工作交給 AI，你專注在<strong>系統設計和業務邏輯</strong></li>
+<li><strong>從個人到大於個人</strong>：你 + AI Agent 群的產出 > 你一個人的產出</li>
+
+</ul><hr>
+
+<h3>6.10 給工程師的 30 天 AI 提升計畫</h3>
+
+<div class="source">📖 <a href="https://aifieldbook.com/insights/ai-training-upskilling" target="_blank" rel="noopener">AI Fieldbook — Training and Upskilling for the AI Era</a></div>
+
+<p>AI Fieldbook（2026/4/24）強調：<strong>學習必須是持續的，不是一次性的</strong>。有效的培訓組合包括線上課程（基礎知識）、Workshop（動手練習）、專案實作（應用）、導師制（指導）和社群學習（同儕交流）。</p>
+
+<h3>第 1 週：基礎建設</h3>
+<ul><li>[ ] 安裝 Cursor，設定 <code>.cursorrules</code></li>
+<li>[ ] 每天用 AI Chat 解決 1 個問題（查文件、理解錯誤、學新概念）</li>
+<li>[ ] 用 Tab 補全寫 50% 以上的代碼</li>
+<li>[ ] 閱讀 [MCP Protocol 文件](https://modelcontextprotocol.io/)，了解工具整合標準</li>
+
+</ul><h3>第 2 週：進階使用</h3>
+<ul><li>[ ] 開始用 Agent Mode 做多檔案修改</li>
+<li>[ ] 設定 MCP server 連接一個內部系統（資料庫 / API 文件）</li>
+<li>[ ] 用 AI 做 Code Review（貼同事的 PR 讓 AI 分析）</li>
+<li>[ ] 練習 6.2 的 Prompt 模板，找到最適合你的版本</li>
+
+</ul><h3>第 3 週：團隊推廣</h3>
+<ul><li>[ ] 在團隊會議中分享你的 AI 使用經驗</li>
+<li>[ ] 幫一個同事設定 Cursor + .cursorrules</li>
+<li>[ ] 建立團隊的 AI 使用規範（什麼用 AI、什麼自己來）</li>
+<li>[ ] 設定 token 預算，追蹤 AI 使用成本</li>
+
+</ul><h3>第 4 週：系統化</h3>
+<ul><li>[ ] 建立你的 AI 工作流模板（Prompt 庫、Agent 配置）</li>
+<li>[ ] 用 AI + 低代碼做一個內部工具（參考 Retool 做法）</li>
+<li>[ ] 開始探索 AI Agent 治理（[Microsoft Toolkit](https://github.com/microsoft/agent-governance-toolkit)）</li>
+<li>[ ] 制定下一季的 AI 學習目標</li>
+
+</ul><h3>持續進步</h3>
+<ul><li>每週花 30 分鐘看 AI 工具更新（Cursor changelog、MCP 新 server）</li>
+<li>每月跟團隊分享一個 AI 使用技巧</li>
+<li>每季評估 AI 工具棧是否有更好的選擇</li>
+<li>訂閱 [AI Fieldbook 週報](https://aifieldbook.com/insights/ai-training-upskilling)（12,000+ AI 領導者的社群）</li>
+
+</ul><hr>
+
+<em>資料來源：[Cursor](https://cursor.sh) / [Windsurf](https://codeium.com/windsurf) / [MCP Protocol](https://modelcontextprotocol.io/) / [AI Fieldbook](https://aifieldbook.com/insights) / [AI Expo 2026](https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/) / [TechEx 2026](https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/) / [IBM](https://www.artificialintelligence-news.com/news/scaling-ai-value-beyond-pilot-phase-purgatory/) / [Databricks](https://www.databricks.com/blog/ai-developer-productivity-2026) / [Microsoft](https://github.com/microsoft/agent-governance-toolkit) / [@akshay_pachaar](https://x.com/akshay_pachaar/status/2058187317509275760)</em>
 </section>
 </div>
 </body></html>
