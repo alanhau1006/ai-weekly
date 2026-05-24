@@ -20,10 +20,23 @@
     nav .brand { font-weight:700; font-size:1.1em; margin-right:16px; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
     nav a { color:var(--text2); text-decoration:none; padding:4px 12px; border-radius:6px; font-size:.9em; transition:.2s; }
     nav a:hover { color:var(--text); background:rgba(255,255,255,.06); }
-    .hero { max-width:960px; margin:0 auto; padding:56px 24px 24px; }
+    .hero { max-width:960px; margin:0 auto; padding:56px 24px 12px; }
     .hero h1 { font-size:2.2em; font-weight:800; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:6px; }
     .hero .sub { color:var(--text2); font-size:1.05em; }
     .container { max-width:960px; margin:0 auto; padding:0 24px 80px; }
+    /* Index / TOC */
+    .toc { margin-top:28px; padding:24px 28px; background:var(--surface); border:1px solid var(--border); border-radius:12px; }
+    .toc-title { font-size:1.3em; font-weight:700; margin-bottom:16px; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    ul.idx { list-style:none; padding:0; margin:0; }
+    ul.idx ul { list-style:none; padding-left:20px; margin:2px 0 8px; }
+    .idx-main { margin-bottom:8px; }
+    .idx-main > a { font-weight:600; font-size:1.05em; color:var(--teal); text-decoration:none; }
+    .idx-main > a:hover { text-decoration:underline; }
+    ul.idx ul li { margin:2px 0; }
+    ul.idx ul li::before { content:"›"; color:var(--blue); margin-right:6px; }
+    ul.idx ul li a { color:var(--text2); text-decoration:none; font-size:.93em; }
+    ul.idx ul li a:hover { color:var(--text); text-decoration:underline; }
+    /* Sections */
     section { margin-top:40px; padding:28px 32px; background:var(--surface); border:1px solid var(--border); border-radius:12px; scroll-margin-top:68px; }
     h2 { font-size:1.5em; font-weight:700; margin-bottom:20px; padding-bottom:10px; border-bottom:2px solid var(--border); }
     h3 { font-size:1.15em; font-weight:600; margin:24px 0 10px; color:var(--blue); }
@@ -48,7 +61,7 @@
     .source { margin:2px 0; font-size:.88em; }
     .source a { color:var(--teal); text-decoration:none; }
     .source a:hover { text-decoration:underline; }
-    @media(max-width:640px) { .hero h1{font-size:1.5em} section{padding:18px} table{font-size:.8em} th,td{padding:5px 6px} }
+    @media(max-width:640px) { .hero h1{font-size:1.5em} section{padding:18px} table{font-size:.8em} th,td{padding:5px 6px} .toc{padding:16px} }
   </style>
 </head>
 <body>
@@ -67,10 +80,20 @@
   <p class="sub">過去一週 AI 領域最重要的趨勢、技術、案例與實用指南</p>
 </div>
 <div class="container">
+  <div class="toc">
+    <div class="toc-title">📑 目錄 Index</div>
+<ul class="idx"><li class="idx-main"><a href="#s1">🚀 進步與組織/工作轉變</a><ul><li><a href="#s1-11">1.1 企業從「輔助智慧」走向「自主智慧」的三階段演化</a></li><li><a href="#s1-12">1.2 OpenAI 新加坡實驗室與 IMDA Agentic AI 框架</a></li><li><a href="#s1-13">1.3 美國政策：川普廢除 AI 行政命令的完整脈絡</a></li><li><a href="#s1-14">1.4 歐盟 AI Act 的 Agentic AI 治理挑戰</a></li><li><a href="#s1-15">1.5 微軟開源 Agent 治理工具包</a></li><li><a href="#s1-16">1.6 AI 資料中心：能源與基礎設施的物理限制</a></li><li><a href="#s1-17">1.7 Physical AI 與人形機器人進入工廠</a></li><li><a href="#s1-18">1.8 企業 AI 部署的「決策審計」方法論</a></li><li><a href="#s1-19">1.9 Shadow AI：安全團隊跟不上部署速度</a></li><li><a href="#s1-110">1.10 JBS Dev 的實務觀點：資料不必完美才能開始</a></li></ul></li>
+<li class="idx-main"><a href="#s2">🧠 新技術</a><ul><li><a href="#s2-21">2.1 GPT-5.5：OpenAI 第一個為 Agentic 工作重訓的基礎模型</a></li><li><a href="#s2-22">2.2 Qwen 3.7-Max 與中國開源模型的崛起</a></li><li><a href="#s2-23">2.3 Nvidia Vera CPU：US$2,000 億的賭注</a></li><li><a href="#s2-24">2.4 阿里巴巴 Zhenwu M890：Agent 優化晶片</a></li><li><a href="#s2-25">2.5 Anthropic Project Glasswing：AI 找漏洞的里程碑</a></li><li><a href="#s2-26">2.6 MCP 協議（Model Context Protocol）深入分析</a></li><li><a href="#s2-27">2.7 Agentic AI 架構的演進</a></li><li><a href="#s2-28">2.8 Amazon Alexa for Shopping：AI + 電商的融合</a></li><li><a href="#s2-29">2.9 Physical AI 的模型需求</a></li></ul></li>
+<li class="idx-main"><a href="#s3">💡 Use Cases</a><ul><li><a href="#s3-31">3.1 企業採購：Agentic AI 的第一個高價值場景</a></li><li><a href="#s3-32">3.2 醫療計費對帳：從混亂數據到結構化</a></li><li><a href="#s3-33">3.3 軟體安全審計：AI 找漏洞的工業化</a></li><li><a href="#s3-34">3.4 工廠自動化：人形機器人落地</a></li><li><a href="#s3-35">3.5 Amazon Alexa for Shopping：消費端 AI Agent</a></li><li><a href="#s3-36">3.6 程式碼開發：LLM 在專業場景的第一個勝利</a></li><li><a href="#s3-37">3.7 數位雙生（Digital Twins）的務實轉向</a></li><li><a href="#s3-38">3.8 邊緣運算 AI：將推理推向現場</a></li><li><a href="#s3-39">3.9 金融服務：AI Agent 在交易和風控中的應用</a></li></ul></li>
+<li class="idx-main"><a href="#s4">🛠 How to Use AI</a><ul><li><a href="#s4-41">4.1 ChatGPT + Office 整合：用 Prompt 做 PPT</a></li><li><a href="#s4-42">4.2 Cursor / Windsurf：AI 原生開發環境</a></li><li><a href="#s4-43">4.3 Microsoft Agent Governance Toolkit：保護你的 AI Agent</a></li><li><a href="#s4-44">4.4 IMDA Agentic AI 風險分級框架：企業部署指南</a></li><li><a href="#s4-45">4.5 Deloitte 決策審計法：從 Pilot 到生產的正確路徑</a></li><li><a href="#s4-46">4.6 解決「Pilot Purgatory」：5 個實用建議</a></li><li><a href="#s4-47">4.7 Shadow AI 防治：零信任 + Agent 治理</a></li><li><a href="#s4-48">4.8 開始用 AI 的最低門檻路徑（JBS Dev 方法）</a></li><li><a href="#s4-49">4.9 EU AI Act 合規清單</a></li></ul></li>
+<li class="idx-main"><a href="#s5">🏛 組織轉變</a><ul><li><a href="#s5-51">5.1 一人公司與「藝人專案」模式</a></li><li><a href="#s5-52">5.2 組織扁平化與敏捷化</a></li><li><a href="#s5-53">5.3 從 Pilot 到規模化：組織調整的現實挑戰</a></li><li><a href="#s5-54">5.4 Fortune 500 製造業規模化實例：40 工廠的 AI 部署</a></li><li><a href="#s5-55">5.5 變革管理：如何讓組織擁抱 AI</a></li><li><a href="#s5-56">5.6 AI 轉型的五階段 Playbook</a></li><li><a href="#s5-57">5.7 新型態角色與人才結構</a></li><li><a href="#s5-58">5.8 組織轉變的關鍵趨勢總覽</a></li><li><a href="#s5-59">5.9 給組織領導者的行動清單</a></li></ul></li>
+<li class="idx-main"><a href="#s6">👩‍💻 工程師 AI 實戰指南</a><ul><li><a href="#s6-61">6.1 AI 輔助開發的工具全景：2026 年工程師的必備武器庫</a></li><li><a href="#s6-62">6.2 Prompt 工程：工程師版本的實戰技巧</a></li><li><a href="#s6-63">6.3 Cursor Agent Mode 的正確使用方式</a></li><li><a href="#s6-64">6.4 工程師的 AI 技能地圖：從入門到精通</a></li><li><a href="#s6-65">6.5 真實工作流：工程師的一天（AI 增強版）</a></li><li><a href="#s6-66">6.6 AI 輔助除錯：從「印 log」到「AI 分析」</a></li><li><a href="#s6-67">6.7 團隊協作：AI 在 Code Review 和知識分享中的角色</a></li><li><a href="#s6-68">6.8 AI 使用的常見陷阱與防治</a></li><li><a href="#s6-69">6.9 從「寫代碼的人」到「指揮 AI 的人」：心態轉變</a></li><li><a href="#s6-610">6.10 給工程師的 30 天 AI 提升計畫</a></li></ul></li>
+<li class="idx-main"><a href="#s7">🏆 模型排行榜</a><ul><li><a href="#s7-71">7.1 閉源模型排行榜：頂級 AI 的戰國時代</a></li><li><a href="#s7-72">7.2 開源模型排行榜：小模型正在霸凌大模型</a></li><li><a href="#s7-73">7.3 開源 vs 閉源對決：差距還有多大？</a></li><li><a href="#s7-74">7.4 性價比排行榜：每一分錢買到多少能力</a></li><li><a href="#s7-75">7.5 特殊能力排行榜：Agent、多語、視覺</a></li><li><a href="#s7-76">7.6 2026 年 5 月排行榜趨勢總結</a></li><li><a href="#s7-77">7.7 數據來源與缺口聲明</a></li></ul></li></ul>
+  </div>
 <section id="s1">
 <h2>第一段：AI 造成的進步與組織／工作轉變</h2>
 
-<h3>1.1 企業從「輔助智慧」走向「自主智慧」的三階段演化</h3>
+<h3 id="s1-11">1.1 企業從「輔助智慧」走向「自主智慧」的三階段演化</h3>
 
 <p>Deloitte AI & Insights 負責人 Prakul Sharma 提出了企業智慧成熟度曲線的三個階段，這是目前業界最清晰的框架之一：</p>
 
@@ -92,7 +115,7 @@
 <li>Pilot 用精選資料和冠軍團隊手動跑，掩蓋了缺失的身份控制、過期資料、延遲的合規審查</li>
 <li>一旦進入正式部署，這些「治理負債（governance debt）」立刻成為結構性阻礙</li>
 
-</ul><h3>1.2 OpenAI 新加坡實驗室與 IMDA Agentic AI 框架</h3>
+</ul><h3 id="s1-12">1.2 OpenAI 新加坡實驗室與 IMDA Agentic AI 框架</h3>
 
 <p>OpenAI 在新加坡設立新區域實驗室，投資 <strong>S$3 億（約 US$2.25 億）</strong>，將招聘 <strong>200+ 員工</strong>，涵蓋工程、研究、政策等職位。這不只是擴張——它伴隨一個更重要的治理框架：</p>
 
@@ -109,7 +132,7 @@
 <tr><td><strong>Tier 4 — 高風險</strong></td><td>自主執行交易、關鍵基礎設施操作</td><td>即時監控 + 隨時撤銷權限 + 監管機構通報</td></tr></table>
 <strong>為什麼重要</strong>：這是全球第一個不是「先發展再管制」，而是「隨風險遞增要求遞增治理」的框架。它解決了企業最頭痛的問題——不是不部署 Agentic AI，而是不知道部署到什麼程度需要什麼治理。
 
-<h3>1.3 美國政策：川普廢除 AI 行政命令的完整脈絡</h3>
+<h3 id="s1-13">1.3 美國政策：川普廢除 AI 行政命令的完整脈絡</h3>
 
 <p>川普政府正式廢除了拜登時期的 AI 行政命令（EO 14110），該命令要求大型 AI 模型開發者向政府報告訓練細節和安全測試結果。廢除的背景：</p>
 
@@ -136,7 +159,7 @@
 
 </ul><strong>這意味什麼</strong>：中國第二大 AI 市場的硬體架構正在被政府指令而非技術基準決定。這不是貿易姿態，是結構性賭注——賭華為效能差距會縮小得夠快。
 
-<h3>1.4 歐盟 AI Act 的 Agentic AI 治理挑戰</h3>
+<h3 id="s1-14">1.4 歐盟 AI Act 的 Agentic AI 治理挑戰</h3>
 
 <p>歐盟 AI Act 在 2026 年進入執行階段，但 Agentic AI 帶來了立法者未預見的挑戰：</p>
 
@@ -159,7 +182,7 @@
 <li><strong>Agentic Asset List（代理資產清單）</strong>：企業必須維護所有運行中 agent 的登記冊，每個 agent 需唯一識別，記錄其能力和授予的權限</li>
 <li><strong>即時撤銷機制</strong>：在高風險場景中，必須能隨時撤銷 agent 的權限</li>
 
-</ul><h3>1.5 微軟開源 Agent 治理工具包</h3>
+</ul><h3 id="s1-15">1.5 微軟開源 Agent 治理工具包</h3>
 
 <p>微軟發布了開源的 <strong>Agent Governance Toolkit</strong>，針對 Agentic AI 的<strong>運行時安全</strong>，這是目前最實用的企業治理工具：</p>
 
@@ -186,7 +209,7 @@
 <li>Toolkit 可設定 <strong>token 消耗上限和 API 調用頻率限制</strong></li>
 <li>防止 agent 在遞迴迴圈中產生天價雲端帳單</li>
 
-</ul><h3>1.6 AI 資料中心：能源與基礎設施的物理限制</h3>
+</ul><h3 id="s1-16">1.6 AI 資料中心：能源與基礎設施的物理限制</h3>
 
 <h3>美國電網壓力</h3>
 
@@ -211,7 +234,7 @@
 <li><strong>邊緣運算作為補充</strong>：將推理推向邊緣可以減少對中心化資料中心的依賴，但邊緣環境更加嚴苛</li>
 <li><strong>零信任安全</strong>：在 IIoT/IT 混合環境中，人類和機器都需要身份驗證和權限證明</li>
 
-</ul><h3>1.7 Physical AI 與人形機器人進入工廠</h3>
+</ul><h3 id="s1-17">1.7 Physical AI 與人形機器人進入工廠</h3>
 
 <h3>Humanoid × Schaeffler：1,000-2,000 台機器人部署</h3>
 
@@ -247,7 +270,7 @@
 <li>目前人形機器人清理一間客房需要<strong>數小時</strong>，人類只需 40 分鐘</li>
 <li>但技能工作仍然是人類的成就，雇主和政府應與工人對話</li>
 
-</ul><h3>1.8 企業 AI 部署的「決策審計」方法論</h3>
+</ul><h3 id="s1-18">1.8 企業 AI 部署的「決策審計」方法論</h3>
 
 <div class="source">📖 <a href="https://www.deloitte.com/global/en/our-thinking/insights/topics/technology/tech-trends/autonomous-intelligence-agentic-ai.html" target="_blank" rel="noopener">Deloitte — Autonomous Intelligence & Decision Audit methodology</a></div>
 
@@ -268,7 +291,7 @@
 <tr><td>去除了值如何衍生的譜系</td><td>保留完整譜系（provenance）</td></tr></table>
 <strong>風險案例</strong>：如果 agent 根據過時的批次處理數據執行交易，可能使用過期的價格層級或過時的合規框架——這是極端風險。
 
-<h3>1.9 Shadow AI：安全團隊跟不上部署速度</h3>
+<h3 id="s1-19">1.9 Shadow AI：安全團隊跟不上部署速度</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/" target="_blank" rel="noopener">TechEx North America 2026 — Cyber Security track</a></div>
 
@@ -279,7 +302,7 @@
 <li>攻擊面在安全團隊不知情的情況下擴大</li>
 <li><strong>零信任作為答案</strong>：人類和機器都需要身份和權限證明；自動化工作流程必須服從與 IT 堆疊中其他元素相同的權限模型</li>
 
-</ul><h3>1.10 JBS Dev 的實務觀點：資料不必完美才能開始</h3>
+</ul><h3 id="s1-110">1.10 JBS Dev 的實務觀點：資料不必完美才能開始</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/jbs-dev-imperfect-data-ai-deployment/" target="_blank" rel="noopener">AI News — JBS Dev imperfect data AI deployment</a></div>
 
@@ -297,7 +320,7 @@
 </section><section id="s2">
 <h2>第二段：AI 新技術（Model / Agent / Knowledge Management / Skills）</h2>
 
-<h3>2.1 GPT-5.5：OpenAI 第一個為 Agentic 工作重訓的基礎模型</h3>
+<h3 id="s2-21">2.1 GPT-5.5：OpenAI 第一個為 Agentic 工作重訓的基礎模型</h3>
 
 <div class="source">📖 <a href="https://openai.com/index/gpt-5-5/" target="_blank" rel="noopener">OpenAI — GPT-5.5 Announcement</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/openai-gpt-5-5-agentic-native-model/" target="_blank" rel="noopener">AI News — GPT-5.5 agentic-native model</a></div>
@@ -321,7 +344,7 @@
 <li>標誌著基礎模型從「通用問答」向「任務執行引擎」的範式轉移</li>
 <li>其他廠商必然跟進，agentic-native 模型將成為新基準</li>
 
-</ul><h3>2.2 Qwen 3.7-Max 與中國開源模型的崛起</h3>
+</ul><h3 id="s2-22">2.2 Qwen 3.7-Max 與中國開源模型的崛起</h3>
 
 <div class="source">📖 <a href="https://qwenlm.github.io/blog/qwen3.7-max/" target="_blank" rel="noopener">Alibaba Qwen 3.7-Max Release</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/deepseek-v4-huawei-ascend-training/" target="_blank" rel="noopener">AI News — DeepSeek V4 on Huawei Ascend</a></div>
@@ -342,7 +365,7 @@
 <li>這不是技術基準的選擇，而是供應鏈政策</li>
 <li>DeepSeek V4 的結果表明，至少在推理工作負載上，國產堆疊的效能差距正在閉合</li>
 
-</ul><h3>2.3 Nvidia Vera CPU：US$2,000 億的賭注</h3>
+</ul><h3 id="s2-23">2.3 Nvidia Vera CPU：US$2,000 億的賭注</h3>
 
 <div class="source">📖 <a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-first-quarter-fiscal-2027" target="_blank" rel="noopener">Nvidia Q1 FY2027 Earnings</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/nvidia-vera-cpu-200-billion-ai-infrastructure/" target="_blank" rel="noopener">AI News — Nvidia Vera CPU launch</a></div>
@@ -364,7 +387,7 @@
 <li><strong>AMD MI400</strong>：挑戰 Nvidia 的開源生態系策略</li>
 <li>模型能力商品化的同時，晶片差異化成為新戰場</li>
 
-</ul><h3>2.4 阿里巴巴 Zhenwu M890：Agent 優化晶片</h3>
+</ul><h3 id="s2-24">2.4 阿里巴巴 Zhenwu M890：Agent 優化晶片</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/alibaba-zhenwu-m890-agent-optimized-chip/" target="_blank" rel="noopener">AI News — Alibaba Zhenwu M890 agent-optimized chip</a></div>
 
@@ -378,7 +401,7 @@
 <li>意味著晶片設計正在適應 agentic AI 的獨特需求：多輪推理、工具調用、狀態管理</li>
 <li>可能帶動整個晶片行業從「更大更快的推理」向「更聰明的 agent 執行」轉向</li>
 
-</ul><h3>2.5 Anthropic Project Glasswing：AI 找漏洞的里程碑</h3>
+</ul><h3 id="s2-25">2.5 Anthropic Project Glasswing：AI 找漏洞的里程碑</h3>
 
 <div class="source">📖 <a href="https://www.anthropic.com/news/project-glasswing" target="_blank" rel="noopener">Anthropic — Project Glasswing</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/anthropic-project-glasswing-10000-vulnerabilities/" target="_blank" rel="noopener">AI News — Anthropic Glasswing 10K+ vulnerabilities</a></div>
@@ -397,7 +420,7 @@
 <li>不同於傳統 fuzzing 和靜態分析，AI 模型能理解代碼語義和上下文</li>
 <li>發現的漏洞類型包括：記憶體安全問題、邏輯錯誤、競態條件等</li>
 
-</ul><h3>2.6 MCP 協議（Model Context Protocol）深入分析</h3>
+</ul><h3 id="s2-26">2.6 MCP 協議（Model Context Protocol）深入分析</h3>
 
 <div class="source">📖 <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener">Anthropic — Model Context Protocol</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/mcp-model-context-protocol-2026-adoption/" target="_blank" rel="noopener">AI News — MCP protocol adoption growth</a></div>
@@ -416,7 +439,7 @@
 <li>不需要為每個模型和每個系統寫客製化整合</li>
 <li><strong>風險</strong>：標準化接口也意味著標準化攻擊面——prompt injection 可以透過 MCP 傳播</li>
 
-</ul><h3>2.7 Agentic AI 架構的演進</h3>
+</ul><h3 id="s2-27">2.7 Agentic AI 架構的演進</h3>
 
 <div class="source">📖 <a href="https://www.deloitte.com/global/en/our-thinking/insights/topics/technology/tech-trends/autonomous-intelligence-agentic-ai.html" target="_blank" rel="noopener">Deloitte — From Assisted to Autonomous Intelligence</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/" target="_blank" rel="noopener">TechEx North America 2026</a></div>
@@ -435,7 +458,7 @@
 <li>每個 agent 有不同角色和權限</li>
 <li><strong>治理挑戰</strong>：agent 之間的互動也需要監控和審計</li>
 
-</ul><h3>2.8 Amazon Alexa for Shopping：AI + 電商的融合</h3>
+</ul><h3 id="s2-28">2.8 Amazon Alexa for Shopping：AI + 電商的融合</h3>
 
 <div class="source">📖 <a href="https://press.aboutamazon.com/2026/2/openai-and-amazon-announce-strategic-partnership" target="_blank" rel="noopener">Amazon — OpenAI Partnership & Alexa for Shopping</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-in-ecommerce-trustpilot-partnerships-integration-news-trad-search-declines/" target="_blank" rel="noopener">AI News — AI in ecommerce, Trustpilot & agentic storefronts</a></div>
@@ -454,7 +477,7 @@
 <li>如果成功，將改變消費者與電商的互動模式</li>
 <li>對其他電商平台構成壓力——需要類似的 agentic 購物體驗</li>
 
-</ul><h3>2.9 Physical AI 的模型需求</h3>
+</ul><h3 id="s2-29">2.9 Physical AI 的模型需求</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/" target="_blank" rel="noopener">TechEx North America 2026 — Physical AI track</a></div>
 
@@ -476,7 +499,7 @@
 </section><section id="s3">
 <h2>第三段：Use Cases（實際應用案例）</h2>
 
-<h3>3.1 企業採購：Agentic AI 的第一個高價值場景</h3>
+<h3 id="s3-31">3.1 企業採購：Agentic AI 的第一個高價值場景</h3>
 
 <div class="source">📖 <a href="https://www.deloitte.com/global/en/our-thinking/insights/topics/technology/tech-trends/autonomous-intelligence-agentic-ai.html" target="_blank" rel="noopener">Deloitte — Autonomous Intelligence & Agentic Procurement</a></div>
 
@@ -495,7 +518,7 @@
 <li>操作在法律和合規部門正式認可的審批閾值內</li>
 <li>任何一個依賴項未解決，自主執行的案例就會完全崩潰</li>
 
-</ul><h3>3.2 醫療計費對帳：從混亂數據到結構化</h3>
+</ul><h3 id="s3-32">3.2 醫療計費對帳：從混亂數據到結構化</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/jbs-dev-imperfect-data-ai-deployment/" target="_blank" rel="noopener">AI News — JBS Dev imperfect data AI deployment</a></div>
 
@@ -511,7 +534,7 @@
 <li>展示了 GenAI → Agentic AI 的漸進路徑：先解決數據理解，再解決決策自動化</li>
 <li>醫療計費是典型的高重複性、高錯誤率流程——AI 的理想目標</li>
 
-</ul><h3>3.3 軟體安全審計：AI 找漏洞的工業化</h3>
+</ul><h3 id="s3-33">3.3 軟體安全審計：AI 找漏洞的工業化</h3>
 
 <div class="source">📖 <a href="https://www.anthropic.com/news/project-glasswing" target="_blank" rel="noopener">Anthropic — Project Glasswing</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/microsoft-agent-governance-toolkit/" target="_blank" rel="noopener">AI News — Microsoft Agent Governance Toolkit</a></div>
@@ -527,7 +550,7 @@
 <li>持續安全監控：不只是部署前掃描，而是持續的運行時監控</li>
 <li>Microsoft Agent Governance Toolkit 提供了運行時攔截層</li>
 
-</ul><h3>3.4 工廠自動化：人形機器人落地</h3>
+</ul><h3 id="s3-34">3.4 工廠自動化：人形機器人落地</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/humanoid-schaeffler-1000-2000-robots-deployment/" target="_blank" rel="noopener">AI News — Humanoid × Schaeffler 1000-2000 robots</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/rlwrld-korea-worker-motion-data-robots/" target="_blank" rel="noopener">AI News — RLWRLD Korea worker motion data</a></div>
@@ -557,7 +580,7 @@
 <li>手部靈巧度仍是瓶頸</li>
 <li>工會擔憂就業影響和技能勞動力管道</li>
 
-</ul><h3>3.5 Amazon Alexa for Shopping：消費端 AI Agent</h3>
+</ul><h3 id="s3-35">3.5 Amazon Alexa for Shopping：消費端 AI Agent</h3>
 
 <div class="source">📖 <a href="https://press.aboutamazon.com/2026/2/openai-and-amazon-announce-strategic-partnership" target="_blank" rel="noopener">Amazon — OpenAI Strategic Partnership</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-in-ecommerce-trustpilot-partnerships-integration-news-trad-search-declines/" target="_blank" rel="noopener">AI News — Agentic storefronts & ecommerce</a></div>
@@ -579,7 +602,7 @@
 <li>改變消費者從「搜尋→比較→購買」到「描述需求→AI 解決」的範式</li>
 <li>對 Walmart、Target 等競爭對手的壓力</li>
 
-</ul><h3>3.6 程式碼開發：LLM 在專業場景的第一個勝利</h3>
+</ul><h3 id="s3-36">3.6 程式碼開發：LLM 在專業場景的第一個勝利</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/" target="_blank" rel="noopener">TechEx North America 2026</a></div>
 <div class="source">📖 <a href="https://www.databricks.com/blog/ai-developer-productivity-2026" target="_blank" rel="noopener">Databricks — AI-assisted developer productivity</a></div>
@@ -594,7 +617,7 @@
 <li>Bug 密度下降 20-40%（AI 代碼審查）</li>
 <li>新手上手時間縮短 50%+（AI 輔助學習和解釋）</li>
 
-</ul><h3>3.7 數位雙生（Digital Twins）的務實轉向</h3>
+</ul><h3 id="s3-37">3.7 數位雙生（Digital Twins）的務實轉向</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/" target="_blank" rel="noopener">TechEx North America 2026 — IoT & Digital Twins track</a></div>
 
@@ -609,7 +632,7 @@
 <ul><li>Pilot purgatory：數位雙生在 demo 中看起來很好，碰到現實的舊機器和老舊軟體就卡住</li>
 <li>「另一個沒人負責的儀表板」綜合症</li>
 
-</ul><h3>3.8 邊緣運算 AI：將推理推向現場</h3>
+</ul><h3 id="s3-38">3.8 邊緣運算 AI：將推理推向現場</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/" target="_blank" rel="noopener">TechEx North America 2026 — Edge Computing track</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/jbs-dev-imperfect-data-ai-deployment/" target="_blank" rel="noopener">AI News — JBS Dev edge AI portability</a></div>
@@ -630,7 +653,7 @@
 <li>模型訓練用的數據（整個網際網路）已經被充分吸收，不太可能有更多未開發數據帶來突破</li>
 <li>焦點將從模型能力跳躍轉向成本可持續性和可攜性</li>
 
-</ul><h3>3.9 金融服務：AI Agent 在交易和風控中的應用</h3>
+</ul><h3 id="s3-39">3.9 金融服務：AI Agent 在交易和風控中的應用</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/eu-ai-act-agentic-ai-governance-challenges/" target="_blank" rel="noopener">AI News — EU AI Act agentic governance</a></div>
 <div class="source">📖 <a href="https://github.com/microsoft/agent-governance-toolkit" target="_blank" rel="noopener">Microsoft Agent Governance Toolkit</a></div>
@@ -655,7 +678,7 @@
 
 <p><hr></p>
 
-<h3>4.1 ChatGPT + Office 整合：用 Prompt 做 PPT</h3>
+<h3 id="s4-41">4.1 ChatGPT + Office 整合：用 Prompt 做 PPT</h3>
 
 <div class="source">📖 <a href="https://openai.com/index/chatgpt-office-integration/" target="_blank" rel="noopener">OpenAI — ChatGPT Office Integration</a></div>
 
@@ -675,7 +698,7 @@
 
 </ul><hr>
 
-<h3>4.2 Cursor / Windsurf：AI 原生開發環境</h3>
+<h3 id="s4-42">4.2 Cursor / Windsurf：AI 原生開發環境</h3>
 
 <div class="source">📖 <a href="https://cursor.sh" target="_blank" rel="noopener">Cursor — AI Code Editor</a></div>
 <div class="source">📖 <a href="https://codeium.com/windsurf" target="_blank" rel="noopener">Windsurf — AI IDE</a></div>
@@ -698,7 +721,7 @@
 
 </ul><hr>
 
-<h3>4.3 Microsoft Agent Governance Toolkit：保護你的 AI Agent</h3>
+<h3 id="s4-43">4.3 Microsoft Agent Governance Toolkit：保護你的 AI Agent</h3>
 
 <div class="source">📖 <a href="https://github.com/microsoft/agent-governance-toolkit" target="_blank" rel="noopener">Microsoft Agent Governance Toolkit — GitHub</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/microsoft-agent-governance-toolkit/" target="_blank" rel="noopener">AI News — Microsoft agent governance toolkit</a></div>
@@ -724,7 +747,7 @@
 
 <p><hr></p>
 
-<h3>4.4 IMDA Agentic AI 風險分級框架：企業部署指南</h3>
+<h3 id="s4-44">4.4 IMDA Agentic AI 風險分級框架：企業部署指南</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/openai-singapore-imda-agentic-ai-framework/" target="_blank" rel="noopener">OpenAI Singapore & IMDA Agentic AI Framework</a></div>
 
@@ -744,7 +767,7 @@
 
 </ul><hr>
 
-<h3>4.5 Deloitte 決策審計法：從 Pilot 到生產的正確路徑</h3>
+<h3 id="s4-45">4.5 Deloitte 決策審計法：從 Pilot 到生產的正確路徑</h3>
 
 <div class="source">📖 <a href="https://www.deloitte.com/global/en/our-thinking/insights/topics/technology/tech-trends/autonomous-intelligence-agentic-ai.html" target="_blank" rel="noopener">Deloitte — Autonomous Intelligence Framework</a></div>
 
@@ -780,7 +803,7 @@
 
 </ul><hr>
 
-<h3>4.6 解決「Pilot Purgatory」：5 個實用建議</h3>
+<h3 id="s4-46">4.6 解決「Pilot Purgatory」：5 個實用建議</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/" target="_blank" rel="noopener">TechEx North America 2026</a></div>
 <div class="source">📖 <a href="https://aifieldbook.com/insights/why-ai-pilots-fail-to-scale" target="_blank" rel="noopener">AI Fieldbook — Why AI pilots fail to scale</a></div>
@@ -795,7 +818,7 @@
 
 </ul><hr>
 
-<h3>4.7 Shadow AI 防治：零信任 + Agent 治理</h3>
+<h3 id="s4-47">4.7 Shadow AI 防治：零信任 + Agent 治理</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/" target="_blank" rel="noopener">TechEx 2026 — Cyber Security & Shadow AI track</a></div>
 <div class="source">📖 <a href="https://github.com/microsoft/agent-governance-toolkit" target="_blank" rel="noopener">Microsoft Agent Governance Toolkit</a></div>
@@ -815,7 +838,7 @@
 <tr><td><strong>AI 工具白名單</strong></td><td>只允許通過安全審查的 AI 服務</td></tr></table>
 <p><hr></p>
 
-<h3>4.8 開始用 AI 的最低門檻路徑（JBS Dev 方法）</h3>
+<h3 id="s4-48">4.8 開始用 AI 的最低門檻路徑（JBS Dev 方法）</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/jbs-dev-imperfect-data-ai-deployment/" target="_blank" rel="noopener">AI News — JBS Dev imperfect data AI deployment</a></div>
 
@@ -835,7 +858,7 @@
 
 </ul><hr>
 
-<h3>4.9 EU AI Act 合規清單</h3>
+<h3 id="s4-49">4.9 EU AI Act 合規清單</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/eu-ai-act-agentic-ai-governance-challenges/" target="_blank" rel="noopener">AI News — EU AI Act agentic governance challenges</a></div>
 
@@ -866,7 +889,7 @@
 
 <p><hr></p>
 
-<h3>5.1 一人公司與「藝人專案」模式</h3>
+<h3 id="s5-51">5.1 一人公司與「藝人專案」模式</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-in-ecommerce-trustpilot-partnerships-integration-news-trad-search-declines/" target="_blank" rel="noopener">AI News — Anthropic SaaS death debate</a></div>
 <div class="source">📖 <a href="https://aifieldbook.com/insights/building-ai-talent-strategy" target="_blank" rel="noopener">AI Fieldbook — AI Talent Playbook: Build, Buy, Borrow, or Bot</a></div>
@@ -887,7 +910,7 @@
 <tr><td>SaaS 替代模式</td><td>用 AI Agent 直接串 API 取代購買 CRM/ERP/HR 軟體</td><td>[Anthropic SaaS 辯論](https://www.artificialintelligence-news.com/news/ai-in-ecommerce-trustpilot-partnerships-integration-news-trad-search-declines/)</td></tr></table>
 <p><hr></p>
 
-<h3>5.2 組織扁平化與敏捷化</h3>
+<h3 id="s5-52">5.2 組織扁平化與敏捷化</h3>
 
 <div class="source">📖 <a href="https://aifieldbook.com/insights/building-ai-ready-organization" target="_blank" rel="noopener">AI Fieldbook — Building the AI-ready organization</a></div>
 <div class="source">📖 <a href="https://aifieldbook.com/insights/ai-leadership-skills" target="_blank" rel="noopener">AI Fieldbook — The new AI leadership stack</a></div>
@@ -913,7 +936,7 @@
 
 </ul><hr>
 
-<h3>5.3 從 Pilot 到規模化：組織調整的現實挑戰</h3>
+<h3 id="s5-53">5.3 從 Pilot 到規模化：組織調整的現實挑戰</h3>
 
 <div class="source">📖 <a href="https://aifieldbook.com/insights/why-ai-pilots-fail-to-scale" target="_blank" rel="noopener">AI Fieldbook — Why most AI pilots fail to scale</a></div>
 
@@ -935,7 +958,7 @@
 <tr><td>沒人負責從 Pilot 推到生產</td><td>指定明確的 owner，不只是「建」，還要負責「推」</td></tr></table>
 <p><hr></p>
 
-<h3>5.4 Fortune 500 製造業規模化實例：40 工廠的 AI 部署</h3>
+<h3 id="s5-54">5.4 Fortune 500 製造業規模化實例：40 工廠的 AI 部署</h3>
 
 <div class="source">📖 <a href="https://aifieldbook.com/insights/fortune-500-manufacturer-ai-case-study" target="_blank" rel="noopener">AI Fieldbook — How a Fortune 500 manufacturer scaled AI across 40 plants</a></div>
 
@@ -960,7 +983,7 @@
 
 <p><hr></p>
 
-<h3>5.5 變革管理：如何讓組織擁抱 AI</h3>
+<h3 id="s5-55">5.5 變革管理：如何讓組織擁抱 AI</h3>
 
 <div class="source">📖 <a href="https://aifieldbook.com/insights/overcoming-resistance-to-ai" target="_blank" rel="noopener">AI Fieldbook — Overcoming resistance: Getting your organization to embrace AI</a></div>
 
@@ -981,7 +1004,7 @@
 
 </ul><hr>
 
-<h3>5.6 AI 轉型的五階段 Playbook</h3>
+<h3 id="s5-56">5.6 AI 轉型的五階段 Playbook</h3>
 
 <div class="source">📖 <a href="https://aifieldbook.com/insights/ai-transformation-playbook" target="_blank" rel="noopener">AI Fieldbook — The AI transformation playbook</a></div>
 
@@ -999,7 +1022,7 @@
 
 </ul><hr>
 
-<h3>5.7 新型態角色與人才結構</h3>
+<h3 id="s5-57">5.7 新型態角色與人才結構</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/laserfiche-ai-agents-act-autonomously-for-the-platforms-users/" target="_blank" rel="noopener">AI News — Laserfiche AI Agents</a></div>
 <div class="source">📖 <a href="https://aifieldbook.com/insights/building-ai-talent-strategy" target="_blank" rel="noopener">AI Fieldbook — AI Talent Playbook</a></div>
@@ -1026,7 +1049,7 @@
 
 <p><hr></p>
 
-<h3>5.8 組織轉變的關鍵趨勢總覽</h3>
+<h3 id="s5-58">5.8 組織轉變的關鍵趨勢總覽</h3>
 
 <table><tr><th>趨勢</th><th>現狀</th><th>未來方向</th></tr>
 <tr><td>組織規模</td><td>規模 = 人力數量</td><td>規模 = 人力 × AI Agent 乘數</td></tr>
@@ -1038,7 +1061,7 @@
 <tr><td>創新來源</td><td>R&D 部門</td><td>全員參與（每個人都是 AI 的使用者/指揮者）</td></tr></table>
 <p><hr></p>
 
-<h3>5.9 給組織領導者的行動清單</h3>
+<h3 id="s5-59">5.9 給組織領導者的行動清單</h3>
 
 <ul><li>🔍 <strong>盤點現有 Pilot</strong>：哪些在 limbo？用 5 大失敗原因對照，找出卡住的原因 → [AI Fieldbook 分析](https://aifieldbook.com/insights/why-ai-pilots-fail-to-scale)</li>
 <li>👤 <strong>指定 Owner</strong>：每個 AI 專案都要有人負責從 Pilot 推到生產</li>
@@ -1062,7 +1085,7 @@
 
 <p><hr></p>
 
-<h3>6.1 AI 輔助開發的工具全景：2026 年工程師的必備武器庫</h3>
+<h3 id="s6-61">6.1 AI 輔助開發的工具全景：2026 年工程師的必備武器庫</h3>
 
 <div class="source">📖 <a href="https://cursor.sh" target="_blank" rel="noopener">Cursor — AI Code Editor</a></div>
 <div class="source">📖 <a href="https://codeium.com/windsurf" target="_blank" rel="noopener">Windsurf — AI IDE</a></div>
@@ -1088,7 +1111,7 @@
 <tr><td>技術主管</td><td>ChatGPT/Claude（架構討論）+ Cursor（驗證想法）</td><td>戰略層面用大模型，戰術層面用 AI IDE</td></tr></table>
 <p><hr></p>
 
-<h3>6.2 Prompt 工程：工程師版本的實戰技巧</h3>
+<h3 id="s6-62">6.2 Prompt 工程：工程師版本的實戰技巧</h3>
 
 <div class="source">📖 <a href="https://aifieldbook.com/insights/ai-training-upskilling" target="_blank" rel="noopener">AI Fieldbook — Training and Upskilling for the AI Era</a></div>
 
@@ -1134,7 +1157,7 @@
 
 <p><hr></p>
 
-<h3>6.3 Cursor Agent Mode 的正確使用方式</h3>
+<h3 id="s6-63">6.3 Cursor Agent Mode 的正確使用方式</h3>
 
 <div class="source">📖 <a href="https://cursor.sh" target="_blank" rel="noopener">Cursor — AI Code Editor</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/" target="_blank" rel="noopener">AI Expo 2026 Day 2 — Developer Workflow Changes</a></div>
@@ -1191,7 +1214,7 @@
 
 <p><hr></p>
 
-<h3>6.4 工程師的 AI 技能地圖：從入門到精通</h3>
+<h3 id="s6-64">6.4 工程師的 AI 技能地圖：從入門到精通</h3>
 
 <div class="source">📖 <a href="https://aifieldbook.com/insights/building-ai-talent-strategy" target="_blank" rel="noopener">AI Fieldbook — AI Talent Playbook: Build, Buy, Borrow, or Bot</a></div>
 <div class="source">📖 <a href="https://aifieldbook.com/insights/ai-training-upskilling" target="_blank" rel="noopener">AI Fieldbook — Training and Upskilling for the AI Era</a></div>
@@ -1236,7 +1259,7 @@
 
 </ul><hr>
 
-<h3>6.5 真實工作流：工程師的一天（AI 增強版）</h3>
+<h3 id="s6-65">6.5 真實工作流：工程師的一天（AI 增強版）</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/" target="_blank" rel="noopener">AI Expo 2026 Day 2 — Developer Workflow Panel</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/scaling-ai-value-beyond-pilot-phase-purgatory/" target="_blank" rel="noopener">IBM — AI Consulting Platform 50% productivity boost</a></div>
@@ -1278,7 +1301,7 @@
 
 <p><hr></p>
 
-<h3>6.6 AI 輔助除錯：從「印 log」到「AI 分析」</h3>
+<h3 id="s6-66">6.6 AI 輔助除錯：從「印 log」到「AI 分析」</h3>
 
 <h3>除錯的 AI 加持路徑</h3>
 
@@ -1310,7 +1333,7 @@
 
 <p><hr></p>
 
-<h3>6.7 團隊協作：AI 在 Code Review 和知識分享中的角色</h3>
+<h3 id="s6-67">6.7 團隊協作：AI 在 Code Review 和知識分享中的角色</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/" target="_blank" rel="noopener">AI Expo 2026 Day 2 — Microsoft/Lloyds/Mastercard Panel</a></div>
 <div class="source">📖 <a href="https://aifieldbook.com/insights/communicating-ai-change" target="_blank" rel="noopener">AI Fieldbook — AI Communication & Buy-in</a></div>
@@ -1332,7 +1355,7 @@
 
 </ul><hr>
 
-<h3>6.8 AI 使用的常見陷阱與防治</h3>
+<h3 id="s6-68">6.8 AI 使用的常見陷阱與防治</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-1-governance-data-readiness-enable-agentic-enterprise/" target="_blank" rel="noopener">AI Expo 2026 Day 1 — Governance & Data Readiness</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/techex-north-america-day-one-lessons-for-all-around-ai-and-more/" target="_blank" rel="noopener">TechEx 2026 — Shadow AI & Cybersecurity</a></div>
@@ -1361,7 +1384,7 @@
 
 </ul><hr>
 
-<h3>6.9 從「寫代碼的人」到「指揮 AI 的人」：心態轉變</h3>
+<h3 id="s6-69">6.9 從「寫代碼的人」到「指揮 AI 的人」：心態轉變</h3>
 
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-2-moving-experimental-pilots-ai-production/" target="_blank" rel="noopener">AI Expo 2026 Day 2 — Future AI Developer Skills</a></div>
 <div class="source">📖 <a href="https://www.artificialintelligence-news.com/news/ai-expo-2026-day-1-governance-data-readiness-enable-agentic-enterprise/" target="_blank" rel="noopener">AI Expo 2026 Day 1 — Illusion of AI Readiness</a></div>
@@ -1391,7 +1414,7 @@
 
 </ul><hr>
 
-<h3>6.10 給工程師的 30 天 AI 提升計畫</h3>
+<h3 id="s6-610">6.10 給工程師的 30 天 AI 提升計畫</h3>
 
 <div class="source">📖 <a href="https://aifieldbook.com/insights/ai-training-upskilling" target="_blank" rel="noopener">AI Fieldbook — Training and Upskilling for the AI Era</a></div>
 
@@ -1438,7 +1461,7 @@
 
 <p><hr></p>
 
-<h3>7.1 閉源模型排行榜：頂級 AI 的戰國時代</h3>
+<h3 id="s7-71">7.1 閉源模型排行榜：頂級 AI 的戰國時代</h3>
 
 <div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum LLM Leaderboard</a></div>
 <div class="source">📖 <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener">Artificial Analysis — Model Comparison</a></div>
@@ -1475,7 +1498,7 @@
 
 </ul><hr>
 
-<h3>7.2 開源模型排行榜：小模型正在霸凌大模型</h3>
+<h3 id="s7-72">7.2 開源模型排行榜：小模型正在霸凌大模型</h3>
 
 <div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum LLM Leaderboard</a></div>
 <div class="source">📖 <a href="https://huggingface.co/google/gemma-4-31b" target="_blank" rel="noopener">Gemma 4 模型卡 — HuggingFace</a></div>
@@ -1522,7 +1545,7 @@
 
 <p><hr></p>
 
-<h3>7.3 開源 vs 閉源對決：差距還有多大？</h3>
+<h3 id="s7-73">7.3 開源 vs 閉源對決：差距還有多大？</h3>
 
 <div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum LLM Leaderboard — Cross-comparison</a></div>
 
@@ -1548,7 +1571,7 @@
 
 </ul><hr>
 
-<h3>7.4 性價比排行榜：每一分錢買到多少能力</h3>
+<h3 id="s7-74">7.4 性價比排行榜：每一分錢買到多少能力</h3>
 
 <div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum — Cheapest & Fastest Models</a></div>
 
@@ -1587,7 +1610,7 @@
 <tr><td><strong>不計成本</strong></td><td>GPT-5.5 Pro ($30/$180)</td><td>HLE 43.1%，但 CP 值存疑</td></tr></table>
 <p><hr></p>
 
-<h3>7.5 特殊能力排行榜：Agent、多語、視覺</h3>
+<h3 id="s7-75">7.5 特殊能力排行榜：Agent、多語、視覺</h3>
 
 <h3>🤖 Agentic 能力排行（TAU-Bench / SWE-Bench / IFEval）</h3>
 
@@ -1622,7 +1645,7 @@
 
 <p><hr></p>
 
-<h3>7.6 2026 年 5 月排行榜趨勢總結</h3>
+<h3 id="s7-76">7.6 2026 年 5 月排行榜趨勢總結</h3>
 
 <h3>五大趨勢</h3>
 
@@ -1650,7 +1673,7 @@
 
 <p><hr></p>
 
-<h3>7.7 數據來源與缺口聲明</h3>
+<h3 id="s7-77">7.7 數據來源與缺口聲明</h3>
 
 <div class="source">📖 <a href="https://www.vellum.ai/llm-leaderboard" target="_blank" rel="noopener">Vellum</a></div> / [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models) / [Anthropic Blog](https://www.anthropic.com) / [Gemma 4 HF](https://huggingface.co/google/gemma-4-31b) / [DeepSeek-R1 HF](https://huggingface.co/deepseek-ai/DeepSeek-R1) / [Kimi K2 HF](https://huggingface.co/moonshotai/Kimi-K2-Instruct) / [GLM-4 GitHub](https://github.com/zai-org/glm-4) / [Llama 4 HF](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E) / [Mistral Blog](https://mistral.ai/news/mistral-small-3-1)
 
